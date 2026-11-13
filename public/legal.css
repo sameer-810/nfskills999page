@@ -1,6 +1,6 @@
 @font-face{font-family:"DM Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/dm-sans-latin.woff2) format("woff2")}
 @font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/manrope-latin.woff2) format("woff2")}
-:root{--navy:#1f2745;--blue:#064a62;--ink:#1f2745;--muted:#5c6b80;--line:#e3eaf2;--pale:#f4f8fc}
+:root{--navy:#2C3556;--blue:#004660;--ink:#2C3556;--muted:#5c6b80;--line:#e3eaf2;--pale:#f4f8fc}
 *{box-sizing:border-box}
 body{margin:0;font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.75}
 a{color:var(--blue)}

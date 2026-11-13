@@ -14,7 +14,7 @@
         return n;
     }
     function safeUrl(u) { try { var x = new URL(u); return x.protocol === 'https:' ? x.href : ''; } catch (e) { return ''; } }
-    function safePhoto(p) { return /^[\w][\w .-]*\.(png|jpe?g|webp|avif)$/i.test(p || '') ? 'images/testimonials/' + encodeURIComponent(p) : ''; }
+    function safePhoto(p) { return /^[\w][\w .-]*\.(png|jpe?g|webp|avif)$/i.test(p || '') ? 'assets/testimonials/' + encodeURIComponent(p) : ''; }
     function initial(name) { return el('span', { 'class': 'initials', 'aria-hidden': 'true', text: name.trim().charAt(0).toUpperCase() }); }
     function stars(value) {
         var n = Math.max(0, Math.min(5, Math.round(value))), s = el('span', { 'class': 'stars', 'aria-hidden': 'true' });
@@ -66,33 +66,48 @@
         box.hidden = false;
     }
 
+    // Testimonials: data/testimonials.json, photos in assets/testimonials/. Only active entries show, by "order".
     function reviews(list) {
-        var box = $('reviews'), grid = $('reviewGrid');
-        if (!box || !grid || !Array.isArray(list)) return;
-        list = list.filter(function (t) { return t && t.name && t.feedback; })
-            .sort(function (a, b) { return (b.featured ? 1 : 0) - (a.featured ? 1 : 0); });
-        if (!list.length) return; // no real reviews yet: the whole section stays hidden
-        list.forEach(function (t) {
-            var photo = safePhoto(t.photo), g = safeUrl(t.googleReviewUrl), l = safeUrl(t.linkedinUrl), img;
+        var box = $('reviews'), track = $('reviewGrid');
+        if (!box || !track || !Array.isArray(list)) return;
+        list = list.filter(function (t) { return t && t.active !== false && t.name && t.review; })
+            .sort(function (a, b) { return (a.order || 0) - (b.order || 0); });
+        if (!list.length) return; // nothing approved yet: the whole section stays hidden
+        list.forEach(function (t, i) {
+            var photo = safePhoto(t.photo), video = safeUrl(t.video), img;
             if (photo) {
-                img = el('img', { src: photo, alt: t.name, width: 52, height: 52, loading: 'lazy', decoding: 'async' });
+                img = el('img', { src: photo, alt: t.name, width: 220, height: 220, loading: 'lazy', decoding: 'async' });
                 img.addEventListener('error', function () { img.replaceWith(initial(t.name)); });
             }
-            var who = el('div', { 'class': 'review-who' }, [img || initial(t.name), el('div', {}, [el('b', { text: t.name }), t.program ? el('small', { text: t.program }) : null])]);
-            var links = el('div', { 'class': 'review-links' });
-            if (g) {
-                links.appendChild(el('a', { href: g, target: '_blank', rel: 'noopener noreferrer', 'aria-label': 'Read ' + t.name + ' Google review (opens in a new tab)', text: 'Google review' }));
-                if (t.googleVerified === true) links.appendChild(el('span', { 'class': 'verified', text: '✓ Verified on Google' }));
-            }
-            if (l) links.appendChild(el('a', { href: l, target: '_blank', rel: 'noopener noreferrer', 'aria-label': t.name + ' on LinkedIn (opens in a new tab)', text: 'LinkedIn' }));
-            grid.appendChild(el('li', { 'class': 'review' + (t.featured ? ' featured' : '') }, [
-                typeof t.rating === 'number' && t.rating > 0 ? el('div', { role: 'img', 'aria-label': 'Rated ' + t.rating + ' out of 5' }, [stars(t.rating)]) : null,
-                el('blockquote', { text: t.feedback }),
-                who,
-                links.children.length ? links : null
+            track.appendChild(el('li', { 'class': 't-card', 'aria-roledescription': 'slide', 'aria-label': (i + 1) + ' of ' + list.length }, [
+                el('div', { 'class': 't-photo' }, [img || initial(t.name)]),
+                el('div', { 'class': 't-body' }, [
+                    typeof t.rating === 'number' && t.rating > 0 ? el('div', { role: 'img', 'aria-label': 'Rated ' + t.rating + ' out of 5' }, [stars(t.rating)]) : null,
+                    el('blockquote', { text: '“' + t.review + '”' }),
+                    el('div', { 'class': 't-who' }, [el('b', { text: t.name }), t.designation ? el('span', { text: t.designation }) : null, t.course ? el('small', { text: t.course }) : null]),
+                    video ? el('a', { 'class': 't-video', href: video, target: '_blank', rel: 'noopener noreferrer', text: 'Watch video review' }) : null
+                ])
             ]));
         });
         box.hidden = false;
+        if (list.length > 1) carousel(track, list.length);
+    }
+
+    // A native scroll-snap strip; the buttons only scroll it, so swipe and keyboard scrolling keep working.
+    function carousel(track, count) {
+        var status = el('span', { 'class': 't-count', 'aria-live': 'polite' });
+        function step(dir) { track.scrollBy({ left: dir * track.clientWidth, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }
+        function current() { return Math.min(count, Math.round(track.scrollLeft / track.clientWidth) + 1); }
+        var prev = el('button', { type: 'button', 'class': 't-nav', 'aria-label': 'Previous testimonial', text: '←' });
+        var next = el('button', { type: 'button', 'class': 't-nav', 'aria-label': 'Next testimonial', text: '→' });
+        prev.addEventListener('click', function () { step(-1); });
+        next.addEventListener('click', function () { step(1); });
+        function update() { var n = current(); status.textContent = n + ' / ' + count; prev.disabled = n === 1; next.disabled = n === count; }
+        var pending;
+        track.addEventListener('scroll', function () { clearTimeout(pending); pending = setTimeout(update, 80); }, { passive: true });
+        track.setAttribute('tabindex', '0');
+        track.parentNode.appendChild(el('div', { 'class': 't-controls' }, [prev, status, next]));
+        update();
     }
 
     load('data/site-config.json').then(function (c) { trustBar(c); admission(c); }).catch(function () {});

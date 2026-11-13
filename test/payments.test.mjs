@@ -25,6 +25,7 @@ beforeEach(() => {
   sheet = new Map();
   sheetDown = false;
   delete process.env.PAYMENT_AMOUNT_RUPEES;
+  delete process.env.REGISTRATION_CLOSES_AT;
   process.env.SHEET_WEBHOOK_URL = SHEET_URL;
   process.env.SHEET_WEBHOOK_SECRET = 'sheet_secret';
   process.env.RAZORPAY_WEBHOOK_SECRET = WEBHOOK_SECRET;
@@ -121,11 +122,11 @@ test('successful flow produces an invoice with the real payment and student', as
   assert.equal(res.headers.get('content-type'), 'application/pdf');
   const pdf = Buffer.from(await res.arrayBuffer()).toString('latin1');
   assert.ok(pdf.startsWith('%PDF-1.4') && pdf.trimEnd().endsWith('%%EOF'));
-  for (const expected of ['Asha Rao', '+91 98123 45678', '999.00', 'Production Deployment Accelerator', '+91 97690 73820', verified.body.data.invoiceNo]) {
+  for (const expected of ['Asha Rao', '+91 98123 45678', '999.00', 'Production Deployment Accelerated Training Program', '+91 97690 73820', payment.id, verified.body.data.invoiceNo]) {
     assert.ok(pdf.includes(expected), `PDF is missing ${expected}`);
   }
-  for (const removed of [payment.id, body.data.orderId, 'Not provided', 'Email']) assert.equal(pdf.includes(removed), false, `PDF still shows ${removed}`);
-  assert.match(res.headers.get('content-disposition'), /Invoice-AA-INV-\d{4}-[A-Z0-9]{6}.pdf/);
+  for (const removed of [body.data.orderId, 'GST', 'Not provided', 'Email']) assert.equal(pdf.includes(removed), false, `PDF still shows ${removed}`);
+  assert.match(res.headers.get('content-disposition'), /Invoice-NF-INV-\d{4}-[A-Z0-9]{6}.pdf/);
   assert.equal(verified.body.data.groupUrl.startsWith('https://chat.whatsapp.com/'), true);
   assert.deepEqual(sheet.get(payment.id), ['Asha Rao', '9812345678', 'Pune, MH', '999.00', payment.id, verified.body.data.paymentDate, 'PAID', verified.body.data.invoiceNo]);
 });
@@ -295,4 +296,13 @@ test('webhooks with a bad signature or an unrelated event change nothing', async
   const unpaid = pay((await order({ ...student, phone: '9123456780' })).body.data.orderId, { status: 'failed' });
   assert.equal(await webhook(unpaid.id), 200);
   assert.equal(sheet.size, 0);
+});
+
+test('no new orders once registration has closed, and an unset or future close time keeps it open', async () => {
+  process.env.REGISTRATION_CLOSES_AT = new Date(Date.now() + 60000).toISOString();
+  assert.equal((await order()).status, 201);
+  process.env.REGISTRATION_CLOSES_AT = new Date(Date.now() - 1000).toISOString();
+  const closed = await order({ ...student, phone: '9876543210' });
+  assert.equal(closed.status, 410);
+  assert.equal(orders.size, 1);
 });

@@ -1,13 +1,38 @@
 [
   {
-    "name": "Demo Student",
-    "program": "10-Day Production Deployment Accelerator",
-    "feedback": "DEMO ONLY: this is a placeholder testimonial to preview the layout. Replace it with a real student review, or delete it, before going live.",
-    "rating": 4,
+    "id": "dummy-1",
+    "name": "Student Name",
+    "designation": "Software Developer",
     "photo": "",
-    "googleReviewUrl": "",
-    "googleVerified": false,
-    "linkedinUrl": "",
-    "featured": true
+    "review": "Placeholder testimonial. Replace this with a genuine review, in the student's own words, before publishing.",
+    "rating": null,
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "",
+    "active": true,
+    "order": 1
+  },
+  {
+    "id": "dummy-2",
+    "name": "Student Name",
+    "designation": "MERN Stack Developer",
+    "photo": "",
+    "review": "Placeholder testimonial. Replace this with a genuine review, in the student's own words, before publishing.",
+    "rating": null,
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "",
+    "active": true,
+    "order": 2
+  },
+  {
+    "id": "dummy-3",
+    "name": "Student Name",
+    "designation": "Computer Science Student",
+    "photo": "",
+    "review": "Placeholder testimonial. Replace this with a genuine review, in the student's own words, before publishing.",
+    "rating": null,
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "",
+    "active": true,
+    "order": 3
   }
 ]

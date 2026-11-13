@@ -1,0 +1,112 @@
+<!doctype html>
+<!-- Source of lib/invoice-template.mjs. To change the invoice look: edit, screenshot at exactly 1055x1491 px, save as JPEG, base64 into TEMPLATE_JPEG. Keep blank areas where receipt-pdf.mjs draws values. -->
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:M;font-weight:400 800;src:url(../public/fonts/manrope-latin.woff2)}
+@font-face{font-family:D;font-weight:400 700;src:url(../public/fonts/dm-sans-latin.woff2)}
+:root{--navy:#2C3556;--orange:#F69125;--accent:#004660;--lb:#EAF4FF;--lg:#F3F5FA;--text:#172B4D;--line:#cfd8e6}
+*{box-sizing:border-box;margin:0}
+html,body{width:1055px;height:1491px;overflow:hidden;background:#fff}
+body{position:relative;font-family:D,Arial,sans-serif;color:var(--text)}
+.a{position:absolute}
+.h{font-family:M,sans-serif;font-weight:800;color:var(--navy)}
+.box{border:2px solid var(--line);border-radius:12px;background:#fff}
+svg{display:block}
+</style></head><body>
+<!-- top-right waves -->
+<svg class="a" style="right:0;top:0" width="520" height="200" viewBox="0 0 520 200">
+  <path d="M120 0 C230 30 330 40 520 150 L520 0Z" fill="#EAF4FF"/>
+  <path d="M230 0 C320 30 400 50 520 120 L520 0Z" fill="#004660"/>
+  <path d="M300 0 C370 25 440 45 520 85 L520 0Z" fill="#2C3556"/>
+  <path d="M215 0 C300 34 380 56 520 132" stroke="#F69125" stroke-width="7" fill="none"/>
+</svg>
+<!-- bottom waves -->
+<svg class="a" style="left:0;bottom:0" width="1055" height="110" viewBox="0 0 1055 110">
+  <path d="M0 40 C250 0 520 70 1055 20 L1055 110 L0 110Z" fill="#EAF4FF"/>
+  <path d="M0 62 C300 25 600 92 1055 45 L1055 110 L0 110Z" fill="#004660"/>
+  <path d="M0 84 C320 52 640 108 1055 72 L1055 110 L0 110Z" fill="#2C3556"/>
+  <path d="M0 55 C300 18 600 85 1055 38" stroke="#F69125" stroke-width="5" fill="none"/>
+</svg>
+
+<!-- header -->
+<img class="a" src="../public/images/nfskills.png" style="left:62px;top:28px;width:190px;height:190px">
+<div class="a" style="left:268px;top:32px;width:3px;height:154px;background:var(--navy)"></div>
+<div class="a h" style="left:294px;top:30px;font-size:68px;line-height:80px">NF<span style="color:var(--orange)">skills</span></div>
+<div class="a" style="left:296px;top:110px;font:italic 600 26px/32px M,sans-serif;color:var(--accent)">Production Deployment Training</div>
+<div class="a" style="left:296px;top:152px;font-size:20px;line-height:26px;color:var(--text)">Live Online Training &nbsp;|&nbsp; Practical Projects &nbsp;|&nbsp; Completion Certificate</div>
+
+<!-- title -->
+<div class="a" style="left:40px;top:248px;width:318px;height:64px;background:var(--lb);clip-path:polygon(6% 0,100% 0,94% 100%,0 100%)"></div>
+<div class="a h" style="left:68px;top:246px;font-size:54px;line-height:66px">INVOICE</div>
+<div class="a" style="left:71px;top:318px;font-size:24px;line-height:30px">Invoice for Course Enrollment</div>
+
+<!-- meta table: values drawn at x≈803, baselines 247 / 285 / 322 -->
+<div class="a box" style="left:592px;top:222px;width:405px;height:152px;overflow:hidden">
+  <div class="a" style="left:184px;top:0;width:221px;height:152px;background:var(--lg)"></div>
+  <div class="a" style="left:184px;top:0;width:2px;height:152px;background:var(--line)"></div>
+  <div class="a" style="left:0;top:37px;width:405px;height:2px;background:var(--line)"></div>
+  <div class="a" style="left:0;top:75px;width:405px;height:2px;background:var(--line)"></div>
+  <div class="a" style="left:0;top:113px;width:405px;height:2px;background:var(--line)"></div>
+</div>
+<div class="a h" style="left:614px;top:226px;font-size:19px;line-height:30px;font-weight:700">Invoice No.</div>
+<div class="a h" style="left:614px;top:264px;font-size:19px;line-height:30px;font-weight:700">Invoice Date</div>
+<div class="a h" style="left:614px;top:302px;font-size:19px;line-height:30px;font-weight:700">Payment ID</div>
+<div class="a h" style="left:614px;top:340px;font-size:19px;line-height:30px;font-weight:700">Status</div>
+<div class="a" style="left:803px;top:340px;width:102px;height:30px;border-radius:15px;background:#1f9d55;color:#fff;font:700 18px/30px M,sans-serif;text-align:center">&#10003; PAID</div>
+
+<!-- billed to: values at x 258, baselines 488 / 522 -->
+<svg class="a" style="left:60px;top:398px" width="30" height="30" viewBox="0 0 24 24" fill="#2C3556"><circle cx="12" cy="7" r="5"/><path d="M2 23c0-6 4.5-9 10-9s10 3 10 9z"/></svg>
+<div class="a h" style="left:102px;top:394px;font-size:26px;line-height:36px">Billed To</div>
+<div class="a box" style="left:60px;top:438px;width:445px;height:120px;background:#FBFCFE"></div>
+<div class="a h" style="left:84px;top:468px;font-size:20px;line-height:26px;font-weight:700">Student Name</div>
+<div class="a h" style="left:240px;top:468px;font-size:20px;line-height:26px">:</div>
+<div class="a h" style="left:84px;top:502px;font-size:20px;line-height:26px;font-weight:700">Phone</div>
+<div class="a h" style="left:240px;top:502px;font-size:20px;line-height:26px">:</div>
+
+<!-- billed by -->
+<svg class="a" style="left:550px;top:398px" width="30" height="30" viewBox="0 0 24 24" fill="#2C3556"><path d="M3 22V4h11v18zM5 6v2h2V6zm4 0v2h2V6zM5 10v2h2v-2zm4 0v2h2v-2zM5 14v2h2v-2zm4 0v2h2v-2zm6 8V9h6v13z"/></svg>
+<div class="a h" style="left:592px;top:394px;font-size:26px;line-height:36px">Billed By</div>
+<div class="a box" style="left:550px;top:438px;width:447px;height:120px;background:#FBFCFE"></div>
+<div class="a h" style="left:600px;top:452px;font-size:23px;line-height:30px">NFskills</div>
+<svg class="a" style="left:568px;top:492px" width="20" height="26" viewBox="0 0 20 26" fill="#004660"><path d="M10 0a10 10 0 0 0-10 10c0 7.5 10 16 10 16s10-8.5 10-16A10 10 0 0 0 10 0zm0 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
+<div class="a" style="left:600px;top:490px;font-size:21px;line-height:28px">Mumbai &ndash; 400088, India</div>
+
+<!-- line item table: name/detail at x 163 baselines 676 / 707, amount right edge 972 baseline 689 -->
+<div class="a" style="left:60px;top:597px;width:937px;height:128px;border:2px solid var(--line);border-radius:12px;overflow:hidden">
+  <div class="a" style="left:0;top:0;width:937px;height:46px;background:var(--navy)"></div>
+  <div class="a" style="left:72px;top:0;width:2px;height:128px;background:var(--line)"></div>
+  <div class="a" style="left:738px;top:0;width:2px;height:128px;background:var(--line)"></div>
+</div>
+<div class="a" style="left:62px;top:604px;width:72px;text-align:center;font:700 21px/32px M,sans-serif;color:#fff">#</div>
+<div class="a" style="left:163px;top:604px;font:700 21px/32px M,sans-serif;color:#fff">Description</div>
+<div class="a" style="left:800px;top:604px;width:172px;text-align:right;font:700 21px/32px M,sans-serif;color:#fff">Amount (&#8377;)</div>
+<div class="a h" style="left:62px;top:673px;width:72px;text-align:center;font-size:20px;line-height:26px;font-weight:700">1</div>
+
+<!-- thank-you -->
+<div class="a" style="left:60px;top:768px;width:387px;height:135px;border-radius:14px;background:var(--lb)"></div>
+<svg class="a" style="left:80px;top:802px" width="66" height="50" viewBox="0 0 66 50" fill="#2C3556"><path d="M33 2 1 16l32 14 32-14z"/><path d="M13 23v13c0 5 9 10 20 10s20-5 20-10V23l-20 9z"/><rect x="59" y="16" width="3" height="20" fill="#F69125"/></svg>
+<div class="a h" style="left:166px;top:784px;width:270px;font-size:22px;line-height:27px;font-weight:800">Thank you for choosing NFskills.</div>
+<div class="a" style="left:166px;top:842px;width:270px;font-size:19px;line-height:24px">We're excited to be part of your learning journey.</div>
+
+<!-- totals: subtotal value baseline 779, total value baseline 833 (white) -->
+<div class="a" style="left:532px;top:750px;width:465px;height:102px;border:2px solid var(--line);border-radius:12px;overflow:hidden">
+  <div class="a" style="left:260px;top:0;width:205px;height:45px;background:var(--lg)"></div>
+  <div class="a" style="left:0;top:45px;width:465px;height:57px;background:var(--navy)"></div>
+</div>
+<div class="a h" style="left:560px;top:760px;font-size:21px;line-height:26px;font-weight:700">Subtotal</div>
+<div class="a" style="left:560px;top:808px;font:800 25px/32px M,sans-serif;color:#fff">Total Amount</div>
+<div class="a" style="left:534px;top:864px;width:461px;text-align:right;font-size:16px;line-height:20px;color:#55647a">Paid online via Razorpay.</div>
+
+<!-- terms: contact number drawn at x 86 baseline 1230 -->
+<svg class="a" style="left:62px;top:1052px" width="28" height="34" viewBox="0 0 24 30" fill="none" stroke="#2C3556" stroke-width="2.4"><path d="M3 2h12l6 6v20H3z"/><path d="M15 2v6h6M7 14h10M7 19h10M7 24h6"/></svg>
+<div class="a h" style="left:108px;top:1052px;font-size:24px;line-height:34px">Terms &amp; Conditions</div>
+<ul class="a" style="left:66px;top:1096px;width:580px;padding-left:20px;font-size:18px;line-height:25px">
+  <li>This invoice is computer-generated and does not require a physical signature.</li>
+  <li>Fees once paid are non-refundable, except as stated in our Terms &amp; Conditions.</li>
+  <li>For any queries, contact NFskills on WhatsApp:</li>
+</ul>
+<div class="a" style="left:665px;top:1068px;width:2px;height:170px;background:var(--line)"></div>
+<div class="a" style="left:745px;top:1150px;width:237px;height:2px;background:var(--navy)"></div>
+<div class="a h" style="left:705px;top:1160px;width:317px;text-align:center;font-size:21px;line-height:28px">Authorized Signatory</div>
+<div class="a" style="left:705px;top:1190px;width:317px;text-align:center;font-size:20px;line-height:26px">NFskills</div>
+</body></html>

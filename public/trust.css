@@ -16,16 +16,33 @@
 .status.upcoming{background:#fff3e0;color:var(--brass)}
 .deadline{grid-column:1/-1;margin:0;padding:10px 14px;border-radius:6px;background:#fff3e0;color:var(--brass);font-weight:600}
 .reviews-head{max-width:720px;margin-bottom:32px}
-.review-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;list-style:none;margin:0;padding:0}
-.review{display:flex;flex-direction:column;gap:14px;padding:22px;border:1px solid var(--line);border-radius:8px;background:#fff}
-.review.featured{grid-column:1/-1;border-color:var(--blue);box-shadow:0 4px 18px rgba(6,74,98,.12)}
-.review blockquote{margin:0;color:var(--ink);flex:1}
-.review-who{display:flex;align-items:center;gap:12px}
-.review-who img,.review-who .initials{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
-.review-who .initials{display:grid;place-items:center;background:var(--blue);color:#fff;font-weight:700}
-.review-who b{display:block;color:var(--navy)}
-.review-who small{color:var(--muted);font-size:14px}
-.review-links{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:15px}
-.review-links a{color:var(--blue);font-weight:600}
 .verified{color:var(--green);font-weight:600}
-@media(max-width:650px){.trust-bar .container{flex-direction:column;gap:6px}.review.featured{grid-column:auto}}
+@media(max-width:650px){.trust-bar .container{flex-direction:column;gap:6px}}
+/* testimonial cards: photo in layered blobs, big quote, accent bar (reference: card-style testimonial banners) */
+.t-carousel{position:relative}
+.t-track{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;list-style:none;margin:0;padding:0;scrollbar-width:none;border-radius:18px}
+.t-track::-webkit-scrollbar{display:none}
+.t-track:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.t-card{flex:0 0 100%;scroll-snap-align:start;display:grid;grid-template-columns:minmax(220px,38%) 1fr;align-items:center;gap:clamp(20px,4vw,56px);padding:clamp(24px,4vw,48px);border-radius:18px;
+ background:linear-gradient(var(--light-blue) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,var(--light-blue) 1px,transparent 1px) 0 0/28px 28px,#fff;border:1px solid var(--line);position:relative;overflow:hidden}
+.t-card::after{content:"";position:absolute;top:18px;right:22px;width:120px;height:56px;background:radial-gradient(circle,#9cc3d6 2px,transparent 2.5px) 0 0/16px 16px;opacity:.8}
+.t-photo{position:relative;width:min(100%,300px);aspect-ratio:1;margin:0 auto;display:grid;place-items:center}
+.t-photo::before,.t-photo::after{content:"";position:absolute;inset:0}
+.t-photo::before{background:var(--navy);border-radius:58% 42% 46% 54%/50% 58% 42% 50%;transform:translate(-6%,4%)}
+.t-photo::after{background:var(--blue);border-radius:44% 56% 60% 40%/55% 45% 55% 45%;transform:translate(4%,-3%) scale(.96)}
+.t-photo img,.t-photo .initials{position:relative;z-index:1;width:74%;height:74%;border-radius:50%;object-fit:cover;border:4px solid #fff;background:var(--light-blue)}
+.t-photo .initials{display:grid;place-items:center;font:800 clamp(48px,7vw,84px)/1 Manrope,sans-serif;color:var(--navy)}
+.t-body{position:relative;z-index:1}
+.t-body blockquote{margin:0 0 22px;font:700 clamp(20px,2.4vw,30px)/1.35 Manrope,sans-serif;color:var(--navy)}
+.t-who{border-left:5px solid var(--blue);padding:2px 0 2px 16px;display:flex;flex-direction:column}
+.t-who b{font:800 clamp(18px,2vw,24px)/1.3 Manrope,sans-serif;color:var(--navy)}
+.t-who span{font-weight:700;color:var(--blue)}
+.t-who small{color:var(--muted);font-size:14px}
+.t-video{display:inline-block;margin-top:14px;font-weight:700;color:var(--blue)}
+.t-controls{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:18px}
+.t-nav{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:20px}
+.t-nav:hover:not(:disabled){background:var(--orange);border-color:var(--orange)}
+.t-nav:disabled{opacity:.4;cursor:default}
+.t-count{min-width:56px;text-align:center;font-weight:700;color:var(--navy)}
+@media(max-width:700px){.t-card{grid-template-columns:1fr;text-align:left}.t-photo{width:200px}.t-card::after{display:none}}
+@media(prefers-reduced-motion:reduce){.t-track{scroll-behavior:auto}}

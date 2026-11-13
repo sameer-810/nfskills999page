@@ -104,7 +104,7 @@ public/data/testimonials.json Student testimonials.
 public/data/logos.json        The logo list (name, category, row, order, local path, source URL, alt text, size).
 public/assets/logos/<category>/  The logo image files (companies, marketing, productivity, accounting,
                               development, cloud, infrastructure, ai).
-public/images/testimonials/   Student photos.
+public/assets/testimonials/   Student photos.
 LOGO_SOURCES.md               Every logo's local path, direct source URL and licence, plus what could not be sourced.
 Changed: public/index.html only. It gained two stylesheet links, two script tags, a trust bar above the
 header, an admission section after the hero, a logo slider section after the technologies list, and a
@@ -117,32 +117,41 @@ logo-slider.js fetches data/logos.json when the slider is about to scroll into v
 All text is inserted with textContent (never innerHTML) and only https:// links are accepted.
 
 STUDENT TESTIMONIALS (public/data/testimonials.json)
-A list with one object per student. An empty list [] hides the whole Student reviews section.
+Shown as a carousel of large cards (photo in layered blobs, quote, name with accent bar), one card per
+slide, with arrow buttons, swipe and keyboard scrolling. One object per student:
   {
-    "name": "Student Name",
-    "program": "10-Day Production Deployment Accelerator",
-    "feedback": "What the student wrote, in their own words.",
-    "rating": 5,
-    "photo": "student-name.jpg",
-    "googleReviewUrl": "https://g.page/r/...",
-    "googleVerified": false,
-    "linkedinUrl": "https://www.linkedin.com/in/...",
-    "featured": false
+    "id": "asha-rao",                    unique id
+    "name": "Student Name",              required
+    "designation": "Software Developer", shown under the name
+    "photo": "asha-rao.jpg",             file in public/assets/testimonials/ (.jpg .jpeg .png .webp .avif)
+    "review": "Their own words.",        required
+    "rating": 5,                         1-5 stars, or null for none
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "https://...",              optional https link, shows "Watch video review"
+    "active": true,                      false hides it without deleting it
+    "order": 1                           lower numbers come first
   }
-- Required: name and feedback. Everything else is optional; leave it out or use "" to hide it.
-- featured: true puts the card first and full width.
-- rating: a number from 1 to 5, drawn as stars. Leave it out to show no stars.
-- Add: copy an object into the list (commas between objects). Edit: change the text. Remove: delete the object.
-- Photos: put the image in public/images/testimonials/ and write only the file name in "photo".
-  Allowed: .jpg .jpeg .png .webp .avif. Use a square image about 200x200 px (it is shown at 52x52).
-  No photo, or a missing file, shows the first letter of the name instead.
-- Google review: put the review link in googleReviewUrl. The "Verified on Google" badge appears only when
-  googleVerified is true AND googleReviewUrl is set. Set it to true only after you opened that review on
-  Google and confirmed it is real and belongs to that student. Otherwise keep false.
-- LinkedIn: put the profile URL in linkedinUrl, only with the student's permission.
-- Use only real feedback that the student gave you.
-- NOTE: the file currently holds ONE entry named "Demo Student" (DEMO ONLY text). Replace or delete it
-  before you go live.
+- Add/edit/delete/reorder by editing the list. No active entries hides the whole section.
+- Photos: square, about 400x400 px. No photo, or a missing file, shows the first letter of the name.
+- NOTE: the file currently holds THREE placeholder entries ("Student Name", placeholder text). Replace them
+  with genuine reviews (with the student's permission) or set "active": false before relying on them.
+
+REGISTRATION COUNTDOWN (public/countdown.js, public/countdown.css)
+Every element with data-countdown counts to "countdown.deadline" in site-config.json (one place):
+  "countdown": { "deadline": "2026-11-16T12:00:00+05:30", "dateLabel": "16 November 2026 · 12:00 PM IST",
+                 "heading": "Registration Closing Soon", "closedHeading": "Registration closed",
+                 "closedText": "..." }
+It recalculates from the clock every second, stops at 00, then shows the closed text, hides the admission
+panel and makes every Pay button show the closed message instead of the form.
+Server side: set REGISTRATION_CLOSES_AT to the same time (e.g. 2026-11-16T12:00:00+05:30) in .env and in the
+Netlify/Vercel environment variables; after it, /api/pay refuses new orders (410). Unset = always open.
+For a new batch, change both values.
+
+INVOICE (lib/invoice-template.mjs, lib/receipt-pdf.mjs)
+NFskills design; the editable source is integrations/invoice-design.html (render it at exactly 1055x1491 px,
+save as JPEG, base64 it into TEMPLATE_JPEG). Shows invoice no. (NF/INV/<year>/<id>), date, Razorpay payment
+ID, PAID status, student name and phone, Billed By NFskills, Mumbai - 400088, India, the course line and the
+verified amount. No GST row. Check the tax treatment with your accountant before relying on it.
 
 TRUST INDICATORS (public/data/site-config.json)
   "studentCount": "10,000+"      Text in the top banner: "Trusted by 10,000+ Students". "" hides it.
@@ -214,8 +223,7 @@ TROUBLESHOOTING
 - Reviews section missing: testimonials.json is empty or has a JSON error (a missing comma or quote).
   Check it in your editor or at jsonlint.com.
 - Rating chip missing: set rating.show to true and reviewCount to a number above 0.
-- "Verified on Google" missing: both googleVerified: true and googleReviewUrl must be set.
-- A photo does not show: the name in "photo" must match the file in public/images/testimonials/ exactly
+- A photo does not show: the name in "photo" must match the file in public/assets/testimonials/ exactly
   (including capitals) and end in .jpg/.jpeg/.png/.webp/.avif. The first letter shows until it is fixed.
 - A link does not show: it must start with https://.
 - Logo slider missing: check logos.json for JSON errors. It appears when you scroll near it.
