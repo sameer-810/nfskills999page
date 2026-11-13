@@ -1,0 +1,4 @@
+.env
+.vercel
+.netlify
+node_modules

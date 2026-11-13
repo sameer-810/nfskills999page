@@ -1,0 +1,1534 @@
+<!doctype html>
+<html lang="en-IN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1f2745">
+    <meta name="description" content="Join a 10-day online DevOps and cloud deployment bootcamp with Azure, AWS, Docker, Kubernetes, VMware and mobile releases. Reserve your seat for ₹999.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="NFskills"><meta property="og:locale" content="en_IN"><meta property="og:title" content="DevOps &amp; Cloud Deployment Bootcamp | NFskills"><meta property="og:description" content="Join a 10-day online DevOps and cloud deployment bootcamp with Azure, AWS, Docker, Kubernetes, VMware and mobile releases. Reserve your seat for ₹999."><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","name":"10-Day Production Deployment Accelerator","description":"A 20-hour live online DevOps and cloud deployment bootcamp covering Azure CI/CD, Docker and Kubernetes, AWS and Google Cloud, VMware infrastructure, and Android and iOS release engineering.","provider":{"@type":"EducationalOrganization","name":"NFskills","telephone":"+91-97690-73820","address":{"@type":"PostalAddress","streetAddress":"Cheeta Camp, Trombay","addressLocality":"Mumbai","postalCode":"400088","addressRegion":"Maharashtra","addressCountry":"IN"}},"inLanguage":"en","teaches":["Azure CI/CD","Docker","Kubernetes","AWS","Google Cloud","Terraform","VMware","Android and iOS release engineering"],"offers":{"@type":"Offer","category":"Paid","price":"999","priceCurrency":"INR","availability":"https://schema.org/InStock"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","startDate":"2026-11-07","courseWorkload":"PT20H","instructor":[{"@type":"Person","name":"Shakir Sir"},{"@type":"Person","name":"Abdullah Sir"},{"@type":"Person","name":"Sadiq Sir"}]}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who should join this bootcamp?","acceptedAnswer":{"@type":"Answer","text":"IT professionals with 2–8 years of experience, system administrators, cloud and DevOps engineers, software developers, fresh graduates and degree students who want practical project exposure and credible technical talking points for interviews."}},{"@type":"Question","name":"Is the bootcamp online?","acceptedAnswer":{"@type":"Answer","text":"Yes. All live sessions are conducted online."}},{"@type":"Question","name":"What are the dates and timings?","acceptedAnswer":{"@type":"Answer","text":"The bootcamp begins on 7 November 2026. Live sessions are scheduled from 8:00 PM to 10:00 PM."}},{"@type":"Question","name":"Will I get recordings and a certificate?","acceptedAnswer":{"@type":"Answer","text":"Yes. Session recordings will be provided, and a certificate will be provided after successful completion of the bootcamp."}},{"@type":"Question","name":"Does this guarantee a job?","acceptedAnswer":{"@type":"Answer","text":"No job placement or interview outcome is guaranteed. The aim is to help you understand practical deployment workflows so you can accurately describe the work you complete and the skills you demonstrate."}},{"@type":"Question","name":"How do I register?","acceptedAnswer":{"@type":"Answer","text":"Choose Pay ₹999 & register, fill in your details and complete the secure Razorpay checkout. You can download your invoice straight after payment and then join the WhatsApp group. Prefer to talk first? Use the WhatsApp button to connect directly with the team."}}]}]}</script>
+    <title>DevOps &amp; Cloud Deployment Bootcamp | NFskills</title>
+    <link rel="icon" type="image/png" href="images/nfskills%20fav.png">
+    <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <style>
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/dm-sans-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"DM Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/dm-sans-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/manrope-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Manrope";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/manrope-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+        :root {
+            --navy: #1f2745;
+            --blue: #064a62;
+            --blue-dark: #04384c;
+            --ink: #1b2a3f;
+            --muted: #55647a;
+            --line: #dfe4ec;
+            --pale: #f5f6f9;
+            --brass: #b45f00;
+            --green: #127a43
+        }
+
+        [hidden] {
+            display: none !important
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 88px
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 2px
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+        }
+
+        body {
+            margin: 0;
+            background: #fff;
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--ink)
+        }
+
+        button,
+        a {
+            font: inherit
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Manrope, sans-serif;
+            color: var(--navy);
+            margin: 0
+        }
+
+        h1 {
+            font-size: clamp(38px, 4.6vw, 58px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -.03em
+        }
+
+        h2 {
+            font-size: clamp(29px, 3.1vw, 38px);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -.02em
+        }
+
+        h3 {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.35;
+            letter-spacing: -.005em
+        }
+
+        .container {
+            width: min(1160px, calc(100% - 48px));
+            margin: auto
+        }
+
+        .announcement {
+            padding: 7px 16px;
+            text-align: center;
+            background: var(--navy);
+            color: #dbe3ee;
+            font-size: 14px
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 20
+        }
+
+        .nav {
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--navy)
+        }
+
+        .brand img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain
+        }
+
+        .brand span {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3
+        }
+
+        .brand b {
+            font: 700 17px Manrope, sans-serif
+        }
+
+        .brand small {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 28px
+        }
+
+        .links a {
+            font-size: 16px;
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 500
+        }
+
+        .links a:hover {
+            color: var(--blue)
+        }
+
+        .links .navcta {
+            background: #f69125;
+            color: var(--navy);
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 600
+        }
+
+        .links .navcta:hover {
+            background: #e07d10;
+            color: var(--navy)
+        }
+
+        .toggle {
+            display: none;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: #fff;
+            width: 44px;
+            height: 44px;
+            font-size: 20px;
+            line-height: 1;
+            color: var(--navy)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            padding: 14px 22px;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.3;
+            text-decoration: none
+        }
+
+        .primary {
+            background: #f69125;
+            color: var(--navy)
+        }
+
+        .primary:hover {
+            background: #e07d10
+        }
+
+        .secondary {
+            color: var(--navy);
+            background: #fff;
+            border-color: #b9c3d1
+        }
+
+        .secondary:hover {
+            border-color: var(--navy)
+        }
+
+        .btn:disabled {
+            opacity: .6;
+            cursor: wait
+        }
+
+        .label {
+            color: var(--muted);
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 0 10px
+        }
+
+        .lead {
+            max-width: 56ch;
+            color: var(--muted);
+            font-size: 18px;
+            margin: 20px 0 0
+        }
+
+        .hero {
+            padding: 64px 0 0
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 360px;
+            gap: 72px;
+            align-items: center
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 30px
+        }
+
+        .hero-note {
+            font-size: 16px;
+            color: var(--muted);
+            margin: 18px 0 0
+        }
+
+        .poster {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            border: 1px solid var(--line)
+        }
+
+        .batch {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            justify-content: space-between;
+            gap: 16px 32px;
+            margin: 56px 0 0;
+            padding: 24px 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .batch dt {
+            font-size: 15px;
+            color: var(--muted)
+        }
+
+        .batch dd {
+            margin: 2px 0 0;
+            font: 700 18px/1.35 Manrope, sans-serif;
+            color: var(--navy)
+        }
+
+        .batch .fee {
+            color: var(--brass)
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 28px;
+            padding: 22px 0;
+            margin: 0;
+            list-style: none;
+            font-size: 16px;
+            color: var(--muted)
+        }
+
+        .tech li:first-child {
+            color: var(--navy);
+            font-weight: 600
+        }
+
+        section.content {
+            padding: 88px 0
+        }
+
+        .tint {
+            background: var(--pale)
+        }
+
+        .aside {
+            display: grid;
+            grid-template-columns: 340px minmax(0, 1fr);
+            gap: 72px;
+            align-items: start
+        }
+
+        .aside .lead {
+            font-size: 17px
+        }
+
+        .points {
+            display: grid;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        .points li {
+            padding: 22px 0;
+            border-top: 1px solid var(--line)
+        }
+
+        .points li:first-child {
+            border-top: 0;
+            padding-top: 0
+        }
+
+        .points li:last-child {
+            padding-bottom: 0
+        }
+
+        .points p {
+            margin: 6px 0 0;
+            color: var(--muted)
+        }
+
+        .project-list {
+            margin-top: 40px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px
+        }
+
+        .project {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 340px;
+            gap: 12px 56px;
+            padding: 30px 32px;
+            border-top: 1px solid var(--line)
+        }
+
+        .project:first-child {
+            border-top: 0
+        }
+
+        .tag {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--brass);
+            margin-bottom: 6px
+        }
+
+        .project h3 {
+            font-size: 21px
+        }
+
+        .project p {
+            color: var(--muted);
+            margin: 8px 0 0;
+            max-width: 56ch
+        }
+
+        .project ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+            align-content: center
+        }
+
+        .project li {
+            font-size: 15px;
+            color: var(--ink)
+        }
+
+        .pipeline-band {
+            background: var(--navy);
+            color: #c9d4e3;
+            padding: 80px 0
+        }
+
+        .pipeline-band h2 {
+            color: #fff
+        }
+
+        .pipeline-band .label,
+        .pipeline-band .lead {
+            color: #c9d4e3
+        }
+
+        .pipeline-head {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 72px;
+            align-items: end
+        }
+
+        .pipeline-head .lead {
+            margin-top: 0
+        }
+
+        .pipeline {
+            list-style: none;
+            margin: 52px 0 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px
+        }
+
+        .pipeline li {
+            position: relative;
+            padding-top: 44px
+        }
+
+        .pipeline li:before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: -24px;
+            height: 2px;
+            background: #4a5578
+        }
+
+        .pipeline li:last-child:before {
+            right: 0
+        }
+
+        .pipeline i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 26px;
+            height: 26px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #fff;
+            color: var(--navy);
+            font: 700 14px Manrope, sans-serif
+        }
+
+        .pipeline b {
+            display: block;
+            color: #fff;
+            font: 700 18px/1.3 Manrope, sans-serif;
+            margin-bottom: 6px
+        }
+
+        .pipeline span {
+            font-size: 15px;
+            line-height: 1.5;
+            display: block
+        }
+
+        .pipeline-note {
+            margin: 40px 0 0;
+            padding-top: 24px;
+            border-top: 1px solid #3a4568;
+            font-size: 16px
+        }
+
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 24px 0 0;
+            font-size: 16px
+        }
+
+        .fact b {
+            display: block;
+            color: #fff;
+            font-weight: 600
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 36px 48px
+        }
+
+        .audience-grid p {
+            margin: 6px 0 0;
+            color: var(--muted)
+        }
+
+        .trainers {
+            display: grid;
+            grid-template-columns: 420px minmax(0, 1fr);
+            gap: 72px;
+            align-items: center
+        }
+
+        .trainer-photo {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            object-position: center 30%;
+            border-radius: 8px;
+            display: block
+        }
+
+        .names {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 32px;
+            margin: 24px 0 0;
+            padding: 0;
+            list-style: none;
+            font: 700 18px Manrope, sans-serif;
+            color: var(--navy)
+        }
+
+        .receive-list {
+            margin: 0;
+            padding: 0;
+            list-style: none
+        }
+
+        .receive-list li {
+            padding: 18px 0;
+            border-top: 1px solid var(--line);
+            font-weight: 600;
+            color: var(--navy)
+        }
+
+        .receive-list li:first-child {
+            border-top: 0;
+            padding-top: 0
+        }
+
+        .receive-list small {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--muted);
+            margin-top: 2px
+        }
+
+        .register {
+            background: var(--navy);
+            border-radius: 12px;
+            padding: 56px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 360px;
+            gap: 56px;
+            align-items: center
+        }
+
+        .register h2 {
+            color: #fff
+        }
+
+        .register .label,
+        .register p {
+            color: #c9d4e3
+        }
+
+        .register p.when {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 0
+        }
+
+        .register>div>p {
+            max-width: 46ch
+        }
+
+        .checkout {
+            background: #fff;
+            border-radius: 8px;
+            padding: 28px
+        }
+
+        .checkout small {
+            color: var(--muted);
+            font-size: 15px
+        }
+
+        .checkout strong {
+            display: block;
+            font: 700 46px/1.15 Manrope, sans-serif;
+            letter-spacing: -.02em;
+            color: var(--navy)
+        }
+
+        .checkout p {
+            color: var(--muted);
+            font-size: 15px;
+            margin: 6px 0 18px
+        }
+
+        .checkout .btn {
+            width: 100%
+        }
+
+        .checkout-links {
+            display: grid;
+            gap: 10px;
+            margin-top: 18px
+        }
+
+        .checkout-links a,
+        .link-button {
+            display: block;
+            width: 100%;
+            background: none;
+            border: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 15px;
+            color: var(--blue);
+            text-decoration: none
+        }
+
+        .checkout-links a:hover,
+        .link-button:hover {
+            text-decoration: underline
+        }
+
+        .text-link {
+            display: inline-block;
+            margin-top: 18px;
+            color: var(--blue);
+            font-weight: 600
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--line)
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid var(--line)
+        }
+
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: 0;
+            text-align: left;
+            padding: 18px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--navy)
+        }
+
+        .faq-q span {
+            transition: transform .15s
+        }
+
+        .faq-item.open .faq-q span {
+            transform: rotate(180deg)
+        }
+
+        .faq-a {
+            display: none;
+            color: var(--muted);
+            padding: 0 24px 20px 0
+        }
+
+        .faq-item.open .faq-a {
+            display: block
+        }
+
+        footer {
+            background: var(--navy);
+            color: #fff;
+            padding: 36px 0 22px
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px
+        }
+
+        .footbrand {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .footbrand img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 50%
+        }
+
+        .footbrand b {
+            font: 700 16px Manrope, sans-serif
+        }
+
+        .footbrand small {
+            display: block;
+            font: 400 14px "DM Sans", Arial, sans-serif;
+            color: #c9d4e3
+        }
+
+        .foot a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600
+        }
+
+        .copyright {
+            border-top: 1px solid #3a4568;
+            margin-top: 24px;
+            padding-top: 16px;
+            color: #c9d4e3;
+            font-size: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 20px
+        }
+
+        .copyright a {
+            color: #fff
+        }
+
+        .wa {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: var(--green);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            padding: 11px 16px;
+            font-size: 15px;
+            font-weight: 600;
+            z-index: 25
+        }
+
+        .bar-cta {
+            display: none
+        }
+
+        .pay-dialog {
+            width: min(460px, calc(100% - 32px));
+            max-height: calc(100dvh - 32px);
+            border: 0;
+            border-radius: 12px;
+            padding: 32px;
+            color: var(--ink)
+        }
+
+        .pay-dialog::backdrop {
+            background: #1f2745b3
+        }
+
+        .pay-dialog h3 {
+            font-size: 24px;
+            margin: 0 40px 6px 0
+        }
+
+        .pay-dialog p {
+            font-size: 16px;
+            line-height: 1.55;
+            color: var(--muted);
+            margin: 0 0 18px
+        }
+
+        .pay-dialog p.pay-consent {
+            font-size: 14px;
+            margin-bottom: 14px
+        }
+
+        .pay-consent a {
+            color: var(--blue)
+        }
+
+        .dialog-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            border-radius: 6px;
+            background: none;
+            font-size: 24px;
+            line-height: 1;
+            color: var(--muted)
+        }
+
+        .dialog-close:hover {
+            background: var(--pale)
+        }
+
+        .field {
+            display: grid;
+            gap: 6px;
+            margin-bottom: 16px
+        }
+
+        .field label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--navy)
+        }
+
+        .field input {
+            font: inherit;
+            font-size: 16px;
+            padding: 12px 14px;
+            border: 1px solid #b9c3d1;
+            border-radius: 6px;
+            width: 100%;
+            color: var(--ink)
+        }
+
+        .field input:focus {
+            outline: 2px solid var(--blue);
+            outline-offset: 1px
+        }
+
+        .field-error {
+            color: #b3261e;
+            font-size: 14px
+        }
+
+        .field-error:empty {
+            display: none
+        }
+
+        .pay-dialog .btn {
+            width: 100%
+        }
+
+        .pay-status {
+            font-weight: 600
+        }
+
+        .pay-dialog .pay-status.bad {
+            color: #b3261e
+        }
+
+        .pay-dialog .pay-status.good {
+            color: var(--green)
+        }
+
+        .receipt-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px;
+            display: grid;
+            gap: 10px
+        }
+
+        .receipt-list li {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 12px
+        }
+
+        .receipt-list span {
+            flex: 1 1 100%
+        }
+
+        .receipt-list a {
+            color: var(--blue);
+            font-weight: 600;
+            white-space: nowrap
+        }
+
+        .pay-summary {
+            margin: 0 0 20px;
+            padding: 6px 16px;
+            background: var(--pale);
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr);
+            font-size: 15px
+        }
+
+        .pay-summary dt {
+            color: var(--muted);
+            padding: 10px 16px 10px 0
+        }
+
+        .pay-summary dd {
+            margin: 0;
+            padding: 10px 0;
+            text-align: right;
+            font-weight: 600;
+            color: var(--navy);
+            overflow-wrap: anywhere
+        }
+
+        .pay-summary dd:not(:last-child),
+        .pay-summary dt:not(:nth-last-child(2)) {
+            border-bottom: 1px solid var(--line)
+        }
+
+        .group-link {
+            display: block;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--green);
+            margin-top: 16px
+        }
+
+        .pay-dialog .group-note {
+            text-align: center;
+            font-size: 14px;
+            margin: 8px 0 0
+        }
+
+        @media(max-width:1000px) {
+            .hero-grid {
+                grid-template-columns: minmax(0, 1fr) 280px;
+                gap: 40px
+            }
+
+            .batch {
+                grid-template-columns: repeat(3, auto)
+            }
+
+            .aside,
+            .pipeline-head,
+            .trainers {
+                grid-template-columns: 1fr;
+                gap: 32px
+            }
+
+            .project {
+                grid-template-columns: 1fr
+            }
+
+            .pipeline {
+                grid-template-columns: 1fr;
+                gap: 0
+            }
+
+            .pipeline li {
+                padding: 0 0 28px 44px
+            }
+
+            .pipeline li:before {
+                top: 0;
+                bottom: 0;
+                left: 12px;
+                right: auto;
+                width: 2px;
+                height: auto
+            }
+
+            .pipeline li:last-child {
+                padding-bottom: 0
+            }
+
+            .pipeline li:last-child:before {
+                display: none
+            }
+
+            .facts {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .register {
+                grid-template-columns: 1fr;
+                padding: 40px;
+                gap: 32px
+            }
+        }
+
+        @media(max-width:800px) {
+            .toggle {
+                display: block
+            }
+
+            .links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 12px 24px 20px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+                border-bottom: 1px solid var(--line)
+            }
+
+            .links.show {
+                display: flex
+            }
+
+            .links a {
+                padding: 10px 0
+            }
+
+            .links .navcta {
+                text-align: center;
+                margin-top: 8px;
+                padding: 12px 16px
+            }
+        }
+
+        @media(max-width:650px) {
+            body {
+                font-size: 16px;
+                padding-bottom: 72px
+            }
+
+            .container {
+                width: calc(100% - 32px)
+            }
+
+            .links {
+                padding-left: 16px;
+                padding-right: 16px
+            }
+
+            .nav {
+                min-height: 66px
+            }
+
+            .brand img {
+                width: 42px;
+                height: 42px
+            }
+
+            .brand b {
+                font-size: 16px
+            }
+
+            .hero {
+                padding-top: 40px
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 36px
+            }
+
+            .visual {
+                max-width: 300px;
+                margin: auto
+            }
+
+            .actions .btn {
+                width: 100%
+            }
+
+            .batch {
+                grid-template-columns: 1fr 1fr;
+                margin-top: 36px
+            }
+
+            section.content,
+            .pipeline-band {
+                padding: 60px 0
+            }
+
+            .project {
+                padding: 24px 20px
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+                gap: 24px
+            }
+
+            .trainer-photo {
+                height: 280px
+            }
+
+            .register {
+                padding: 28px 20px
+            }
+
+            .checkout {
+                padding: 22px
+            }
+
+            .foot {
+                align-items: flex-start;
+                flex-direction: column
+            }
+
+            .wa {
+                right: 12px;
+                bottom: 12px;
+                left: auto;
+                height: 48px;
+                display: flex;
+                align-items: center
+            }
+
+            .bar-cta {
+                position: fixed;
+                left: 12px;
+                bottom: 12px;
+                right: 124px;
+                height: 48px;
+                z-index: 25;
+                padding: 0 12px;
+                display: flex;
+                font-size: 16px
+            }
+
+            .pay-dialog {
+                padding: 26px 20px
+            }
+        }
+
+        @media(max-width:390px) {
+            .project ul {
+                grid-template-columns: 1fr
+            }
+
+            .facts {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="announcement">November batch admissions are open. Online across India.</div>
+    <header>
+        <div class="container nav"><a class="brand" href="#top"><img src="images/nfskills.png" width="48" height="48" alt=""><span><b>NFskills</b><small>NF Skills × FiveM Infotech</small></span></a><button class="toggle" type="button" aria-label="Open menu" aria-controls="siteMenu" aria-expanded="false">☰</button>
+            <nav class="links" id="siteMenu"><a href="#projects">Projects</a><a href="#program">Program</a><a href="#trainers">Trainers</a><a href="#faq">FAQs</a><a href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Accelerator.">WhatsApp us</a><a class="navcta" href="#register">Reserve your seat</a></nav>
+        </div>
+    </header>
+    <main id="top">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <p class="label">10-Day Production Deployment Accelerator</p>
+                        <h1>Move beyond theory. Build deployment experience.</h1>
+                        <p class="lead">Five real-world project tracks. One focused online DevOps and cloud deployment bootcamp. Learn how modern applications and infrastructure move into production.</p>
+                        <div class="actions"><a class="btn primary" href="#register">Reserve your seat</a><a class="btn secondary" href="#projects">Explore project tracks</a></div>
+                        <p class="hero-note">Session recordings and a completion certificate are included.</p>
+                    </div>
+                    <div class="visual"><img class="poster" src="images/Banner.png" width="1024" height="1536" fetchpriority="high" alt="10-Day Production Deployment Accelerator bootcamp poster showing the ₹999 batch fee"></div>
+                </div>
+                <dl class="batch">
+                    <div><dt>Starts</dt><dd>7 November 2026</dd></div>
+                    <div><dt>Live sessions</dt><dd>8:00 PM – 10:00 PM</dd></div>
+                    <div><dt>Duration</dt><dd>10 days, 20 learning hours</dd></div>
+                    <div><dt>Format</dt><dd>100% online, 5 project tracks</dd></div>
+                    <div><dt>Special batch fee</dt><dd class="fee">₹999</dd></div>
+                </dl>
+            </div>
+        </section>
+        <div class="container">
+            <ul class="tech" aria-label="Technologies and platforms"><li>Technologies &amp; platforms</li><li>Microsoft Azure</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>Google Cloud</li><li>VMware</li><li>Android</li><li>Apple iOS</li></ul>
+        </div>
+        <section class="content tint">
+            <div class="container aside">
+                <div>
+                    <p class="label">The experience gap</p>
+                    <h2>Knowing the technology is only the beginning.</h2>
+                    <p class="lead">Technical interviews often go deeper than definitions. You may be asked how an application was deployed, how a server was configured, or what you checked when something failed.</p>
+                </div>
+                <ul class="points">
+                    <li><h3>Concepts without context</h3><p>Understand where tools fit into an actual deployment workflow.</p></li>
+                    <li><h3>Hard to explain your work</h3><p>Build a clearer understanding of architecture, configuration and validation.</p></li>
+                    <li><h3>Your resume needs evidence</h3><p>Describe only the project tasks and technical skills you genuinely worked on.</p></li>
+                </ul>
+            </div>
+        </section>
+        <section class="content" id="projects">
+            <div class="container">
+                <p class="label">The five project tracks</p>
+                <h2>One bootcamp. Five production domains.</h2>
+                <div class="project-list">
+                    <article class="project">
+                        <div>
+                            <div class="tag">Cloud and DevOps</div>
+                            <h3>Azure Production Deployment &amp; CI/CD</h3>
+                            <p>Provision cloud infrastructure and build an automated deployment workflow for an application.</p>
+                        </div>
+                        <ul>
+                            <li>Azure VM &amp; networking</li>
+                            <li>Azure Repos</li>
+                            <li>Azure Pipelines</li>
+                            <li>Deployment &amp; monitoring</li>
+                        </ul>
+                    </article>
+                    <article class="project">
+                        <div>
+                            <div class="tag">Containers and orchestration</div>
+                            <h3>Docker &amp; Kubernetes Production Deployment</h3>
+                            <p>Containerize an application, publish an image and deploy it using Kubernetes workloads and services.</p>
+                        </div>
+                        <ul>
+                            <li>Dockerfile &amp; images</li>
+                            <li>Container registry</li>
+                            <li>Pods &amp; Deployments</li>
+                            <li>Services &amp; Ingress</li>
+                        </ul>
+                    </article>
+                    <article class="project">
+                        <div>
+                            <div class="tag">Multi-cloud</div>
+                            <h3>AWS &amp; Google Cloud Deployment</h3>
+                            <p>Understand how to provision and operate comparable application environments across two cloud platforms.</p>
+                        </div>
+                        <ul>
+                            <li>AWS VPC &amp; EC2</li>
+                            <li>GCP Compute Engine</li>
+                            <li>IAM &amp; firewall rules</li>
+                            <li>Terraform fundamentals</li>
+                        </ul>
+                    </article>
+                    <article class="project">
+                        <div>
+                            <div class="tag">Enterprise infrastructure</div>
+                            <h3>VMware Enterprise Infrastructure &amp; Server Deployment</h3>
+                            <p>Build a virtual infrastructure and deploy Linux and Windows server workloads that support business applications.</p>
+                        </div>
+                        <ul>
+                            <li>ESXi &amp; vCenter</li>
+                            <li>VMs &amp; datastores</li>
+                            <li>vSwitches &amp; VLANs</li>
+                            <li>Linux / Windows operations</li>
+                        </ul>
+                    </article>
+                    <article class="project">
+                        <div>
+                            <div class="tag">Mobile release engineering</div>
+                            <h3>Android &amp; iOS Application Release Engineering</h3>
+                            <p>Follow a mobile release workflow from build and signing through testing, store submission and production release.</p>
+                        </div>
+                        <ul>
+                            <li>Android Studio &amp; Gradle</li>
+                            <li>APK / AAB signing</li>
+                            <li>Xcode &amp; TestFlight</li>
+                            <li>Play Console / App Store</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="pipeline-band" id="program">
+            <div class="container">
+                <div class="pipeline-head">
+                    <div>
+                        <p class="label">How the program works</p>
+                        <h2>A focused 10-day learning sprint.</h2>
+                    </div>
+                    <p class="lead">Twenty hours of guided online sessions, organized around practical project demonstrations, explanations and guided activities.</p>
+                </div>
+                <ol class="pipeline">
+                    <li><i aria-hidden="true">1</i><b>Azure + DevOps</b><span>Cloud foundations, pipelines and deployment</span></li>
+                    <li><i aria-hidden="true">2</i><b>Docker + Kubernetes</b><span>Container workflows and orchestration</span></li>
+                    <li><i aria-hidden="true">3</i><b>AWS + Google Cloud</b><span>Two cloud environments and infrastructure as code</span></li>
+                    <li><i aria-hidden="true">4</i><b>VMware Infrastructure</b><span>Virtual machines, networking and server operations</span></li>
+                    <li><i aria-hidden="true">5</i><b>Android + iOS Release</b><span>Build, signing, testing and store distribution</span></li>
+                </ol>
+                <p class="pipeline-note">Each project domain is covered through focused sessions across the 10-day program.</p>
+                <div class="facts">
+                    <div class="fact"><b>2 hours each day</b>8:00 PM – 10:00 PM</div>
+                    <div class="fact"><b>Live online sessions</b>Join from wherever you are</div>
+                    <div class="fact"><b>Session recordings</b>Revisit the lessons later</div>
+                    <div class="fact"><b>Completion certificate</b>Provided after successful completion</div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container aside">
+                <div>
+                    <p class="label">Who should attend</p>
+                    <h2>For learners ready to put their skills to work.</h2>
+                </div>
+                <div class="audience-grid">
+                    <article>
+                        <h3>IT professionals</h3>
+                        <p>For professionals with 2–8 years of experience who want to strengthen practical deployment knowledge.</p>
+                    </article>
+                    <article>
+                        <h3>System, cloud &amp; DevOps</h3>
+                        <p>For administrators, infrastructure engineers and cloud or DevOps practitioners.</p>
+                    </article>
+                    <article>
+                        <h3>Software developers</h3>
+                        <p>For developers who want to understand how applications are packaged, deployed and released.</p>
+                    </article>
+                    <article>
+                        <h3>Degree students &amp; graduates</h3>
+                        <p>For students who want project exposure and accurate, experience-backed technical talking points for their resumes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="content tint" id="trainers">
+            <div class="container trainers"><img class="trainer-photo" src="images/face.png" width="1369" height="1149" loading="lazy" decoding="async" alt="NFskills trainer">
+                <div>
+                    <p class="label">Learn with practitioners</p>
+                    <h2>Guidance from an expert trainer team.</h2>
+                    <p class="lead">The bootcamp is delivered by multiple trainers with expertise across the technologies covered in the program.</p>
+                    <ul class="names"><li>Sachin Sir</li><li>Vijay Sir</li><li>Mohan Sir</li></ul>
+                    <p class="hero-note">NFskills, NF Skills × FiveM Infotech</p>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container aside">
+                <div>
+                    <p class="label">What you receive</p>
+                    <h2>More than a live class.</h2>
+                    <p class="lead">A compact learning experience designed to give you material to revisit and work you can explain honestly.</p>
+                </div>
+                <ul class="receive-list">
+                    <li>Five project tracks<small>Explore five major deployment domains.</small></li>
+                    <li>Session recordings<small>Revisit the training after the live sessions.</small></li>
+                    <li>Completion certificate<small>Provided after completing the bootcamp.</small></li>
+                    <li>Practical learning activities<small>Follow project workflows and guided technical demonstrations.</small></li>
+                </ul>
+            </div>
+        </section>
+        <section class="content" id="register" style="padding-top:0">
+            <div class="container register">
+                <div>
+                    <p class="label">November batch, enrollment open</p>
+                    <h2>Make your next project count.</h2>
+                    <p>Join the 10-Day Production Deployment Accelerator and build a stronger foundation across five practical project domains.</p>
+                    <p class="when">7 November 2026, 8 PM–10 PM, online</p>
+                </div>
+                <div class="checkout"><small>Special batch fee</small><strong>₹999</strong>
+                    <p>One-time fee for the complete 10-day bootcamp.</p><button class="btn primary" id="payButton" type="button">Pay ₹999 &amp; register</button>
+                    <div class="checkout-links"><a href="https://wa.me/919769073820?text=Hi%2C%20I%20want%20to%20register%20for%20the%20Production%20Deployment%20Accelerator.">Register on WhatsApp instead</a><a href="https://wa.me/919769073820">Questions? Chat with our team</a><button class="link-button" id="receiptsButton" type="button">Find my invoice</button></div>
+                </div>
+            </div>
+        </section>
+        <section class="content tint" id="faq">
+            <div class="container aside">
+                <div>
+                    <p class="label">Need to know</p>
+                    <h2>Questions, answered.</h2>
+                    <p class="lead">Need help deciding? Our team can guide you through registration.</p><a class="text-link" href="https://wa.me/919769073820">Ask us on WhatsApp</a>
+                </div>
+                <div>
+                    <div class="faq-item open"><button class="faq-q" type="button" aria-expanded="true">Who should join this bootcamp? <span aria-hidden="true">⌄</span></button>
+                        <div class="faq-a">IT professionals with 2–8 years of experience, system administrators, cloud and DevOps engineers, software developers, fresh graduates and degree students who want practical project exposure and credible technical talking points for interviews.</div>
+                    </div>
+                    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Is the bootcamp online? <span aria-hidden="true">⌄</span></button>
+                        <div class="faq-a">Yes. All live sessions are conducted online.</div>
+                    </div>
+                    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">What are the dates and timings? <span aria-hidden="true">⌄</span></button>
+                        <div class="faq-a">The bootcamp begins on 7 November 2026. Live sessions are scheduled from 8:00 PM to 10:00 PM.</div>
+                    </div>
+                    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Will I get recordings and a certificate? <span aria-hidden="true">⌄</span></button>
+                        <div class="faq-a">Yes. Session recordings will be provided, and a certificate will be provided after successful completion of the bootcamp.</div>
+                    </div>
+                    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Does this guarantee a job? <span aria-hidden="true">⌄</span></button>
+                        <div class="faq-a">No job placement or interview outcome is guaranteed. The aim is to help you understand practical deployment workflows so you can accurately describe the work you complete and the skills you demonstrate.</div>
+                    </div>
+                    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">How do I register? <span aria-hidden="true">⌄</span></button>
+                        <div class="faq-a">Choose Pay ₹999 &amp; register, fill in your details and complete the secure Razorpay checkout. You can download your invoice straight after payment and then join the WhatsApp group. Prefer to talk first? Use the WhatsApp button to connect directly with the team.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="foot">
+                <div class="footbrand"><img src="images/nfskills.png" width="48" height="48" loading="lazy" alt=""><b>NFskills<small>NF Skills × FiveM Infotech</small></b></div><a href="https://wa.me/919769073820">WhatsApp: +91 97690 73820</a>
+            </div>
+            <div class="copyright"><span>© 2026 NFskills, NF Skills × FiveM Infotech</span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>
+        </div>
+    </footer>
+    <a class="btn primary bar-cta" href="#register">Reserve for ₹999</a>
+    <a class="wa" href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Accelerator.">WhatsApp</a>
+    <dialog class="pay-dialog" id="payDialog" aria-labelledby="payTitle">
+        <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+        <form id="payForm">
+            <h3 id="payTitle">Your details</h3>
+            <p>All fields are required. Your name and phone number appear on your invoice.</p>
+            <p class="pay-status bad" id="payMessage" role="alert" hidden></p>
+            <div class="field"><label for="payName">Full Name</label><input id="payName" name="name" required
+                    minlength="2" maxlength="80" pattern=".*\S.*" autocomplete="name"><span class="field-error"
+                    data-error="name"></span></div>
+            <div class="field"><label for="payPhone">Phone Number</label><input id="payPhone" name="phone" type="tel"
+                    inputmode="numeric" required maxlength="10" pattern="[6-9][0-9]{9}"
+                    title="10-digit Indian mobile number" placeholder="10-digit mobile number"
+                    autocomplete="tel-national"><span class="field-error" data-error="phone"></span></div>
+            <div class="field"><label for="payLocation">Current Location</label><input id="payLocation" name="location"
+                    required minlength="2" maxlength="80" pattern=".*\S.*" placeholder="City, State"
+                    autocomplete="address-level2"><span class="field-error" data-error="location"></span></div>
+            <p class="pay-consent">By continuing, you agree to our <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> and <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+            <button class="btn primary" type="submit">Continue to payment</button>
+        </form>
+        <div id="payResult" hidden>
+            <h3>Payment</h3>
+            <p class="pay-status" id="payStatus" role="status"></p>
+            <dl class="pay-summary" id="paySummary" hidden>
+                <dt>Total amount paid</dt>
+                <dd id="payAmount"></dd>
+                <dt>Transaction ID</dt>
+                <dd id="payTransaction"></dd>
+                <dt>Payment date</dt>
+                <dd id="payDate"></dd>
+            </dl><a class="btn primary" id="payReceipt" download hidden>Download Invoice (PDF)</a><a class="group-link"
+                id="payGroup" hidden>Join the WhatsApp group</a>
+            <p class="group-note" id="payGroupNote" hidden></p>
+        </div>
+    </dialog>
+    <dialog class="pay-dialog" id="receiptsDialog" aria-labelledby="receiptsTitle">
+        <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+        <h3 id="receiptsTitle">My invoices</h3>
+        <ul class="receipt-list" id="receiptList"></ul>
+        <form id="findForm">
+            <p>Paid on another device? Enter the payment ID from your Razorpay confirmation (starts with pay_).</p>
+            <p class="pay-status bad" id="findMessage" role="alert" hidden></p>
+            <div class="field"><label for="findPhone">Phone Number</label><input id="findPhone" name="phone" type="tel"
+                    inputmode="numeric" required maxlength="10" pattern="[6-9][0-9]{9}"
+                    title="10-digit Indian mobile number"></div>
+            <div class="field"><label for="findPayment">Payment ID</label><input id="findPayment" name="paymentId"
+                    required pattern="pay_[A-Za-z0-9]+" placeholder="pay_..."></div><button class="btn primary"
+                type="submit">Find my invoice</button>
+        </form>
+    </dialog>
+    <script>
+        var menu = document.querySelector('.links'), menuToggle = document.querySelector('.toggle');
+        function setMenu(open) { menu.classList.toggle('show', open); menuToggle.setAttribute('aria-expanded', String(open)) }
+        menuToggle.addEventListener('click', function () { setMenu(!menu.classList.contains('show')) });
+        document.querySelectorAll('.faq-q').forEach(function (button) { button.addEventListener('click', function () { button.setAttribute('aria-expanded', String(button.parentElement.classList.toggle('open'))) }) });
+        document.querySelectorAll('.links a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false) }) });
+        (function () {
+            var API = '/api/pay', STORE = 'paidReceipts', GROUP_FALLBACK_MS = 30000, GROUP_AFTER_DOWNLOAD_MS = 2000, UNAVAILABLE = 'Online payment is not available right now. Please contact us on WhatsApp.';
+            var payDialog = document.getElementById('payDialog'), payForm = document.getElementById('payForm'), payResult = document.getElementById('payResult'), payStatus = document.getElementById('payStatus'), payMessage = document.getElementById('payMessage'), payReceipt = document.getElementById('payReceipt'), paySummary = document.getElementById('paySummary'), payAmount = document.getElementById('payAmount'), payTransaction = document.getElementById('payTransaction'), payDate = document.getElementById('payDate'), payGroup = document.getElementById('payGroup'), payGroupNote = document.getElementById('payGroupNote');
+            var receiptsDialog = document.getElementById('receiptsDialog'), findForm = document.getElementById('findForm'), findMessage = document.getElementById('findMessage'), receiptList = document.getElementById('receiptList');
+            function post(action, body) { return fetch(API + '?action=' + action, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }).then(function (res) { return res.json() }).catch(function () { return { success: false, message: UNAVAILABLE } }) }
+            function formData(form) { return Object.fromEntries(new FormData(form)) }
+            function setMessage(element, text) { element.textContent = text || ''; element.hidden = !text }
+            function receiptUrl(receipt) { return API + '?action=receipt&payment_id=' + encodeURIComponent(receipt.paymentId) + '&token=' + encodeURIComponent(receipt.token) }
+            function savedReceipts() { try { return JSON.parse(localStorage.getItem(STORE)) || [] } catch (e) { return [] } }
+            function saveReceipt(receipt) { var list = savedReceipts().filter(function (item) { return item.paymentId !== receipt.paymentId }); list.unshift(receipt); try { localStorage.setItem(STORE, JSON.stringify(list)) } catch (e) { } }
+            function showForm(message) { payForm.hidden = false; payResult.hidden = true; setMessage(payMessage, message); if (!payDialog.open) payDialog.showModal() }
+            var groupTimer, currentReceipt;
+            function openGroup(url, delay) { clearTimeout(groupTimer); groupTimer = setTimeout(function () { window.location.href = url }, delay) }
+            function showResult(text, kind, receipt) {
+                payForm.hidden = true; payResult.hidden = false; payStatus.textContent = text; payStatus.className = 'pay-status ' + (kind || '');[payReceipt, paySummary, payGroup, payGroupNote].forEach(function (el) { el.hidden = !receipt });
+                if (receipt) { currentReceipt = receipt; payReceipt.href = receiptUrl(receipt); payReceipt.download = invoiceFile(receipt); payAmount.textContent = receipt.amount.replace('INR ', '₹'); payTransaction.textContent = receipt.paymentId; payDate.textContent = receipt.paymentDate; payGroup.href = receipt.groupUrl; payGroupNote.textContent = 'Taking you to the WhatsApp invitation shortly. You can download this invoice again any time from Find my invoice.'; openGroup(receipt.groupUrl, GROUP_FALLBACK_MS) }
+                if (!payDialog.open) payDialog.showModal()
+            }
+            function loadCheckout() { return new Promise(function (resolve, reject) { if (window.Razorpay) return resolve(); var script = document.createElement('script'); script.src = 'https://checkout.razorpay.com/v1/checkout.js'; script.onload = resolve; script.onerror = reject; document.head.appendChild(script) }) }
+            function verify(response) { showResult('Verifying your payment. Please do not close this page.'); post('verify', { orderId: response.razorpay_order_id, paymentId: response.razorpay_payment_id, signature: response.razorpay_signature }).then(function (result) { if (result.success) { saveReceipt(result.data); showResult('Payment successful. Invoice no. ' + result.data.invoiceNo + '.', 'good', result.data) } else { showResult('We could not verify this payment yet. If money was deducted, keep your payment ID ' + response.razorpay_payment_id + ' and use Find my invoice, or contact us on WhatsApp.', 'bad') } }) }
+            function openCheckout(order, student) { var failure = ''; var checkout = new window.Razorpay({ key: order.keyId, order_id: order.orderId, amount: order.amount, currency: order.currency, name: 'NFskills', description: 'Production Deployment Accelerator', prefill: { name: student.name, contact: '+91' + student.phone }, theme: { color: '#064a62' }, handler: verify, modal: { ondismiss: function () { showForm(failure ? 'Payment failed: ' + failure + ' You have not been registered. Please try again.' : 'Payment cancelled. You have not been charged.') } } }); checkout.on('payment.failed', function (event) { failure = event.error.description || 'the bank declined it.' }); checkout.open() }
+            document.getElementById('payButton').addEventListener('click', function () { showForm() });
+            function invoiceFile(receipt) { return 'Invoice-' + receipt.invoiceNo.replace(/\//g, '-') + '.pdf' }
+            // The file is fetched first so a slow response can never be cancelled by the WhatsApp redirect.
+            function saveInvoice(receipt) { return fetch(receiptUrl(receipt)).then(function (res) { if (!res.ok) throw new Error('Invoice unavailable'); return res.blob() }).then(function (blob) { var link = document.createElement('a'), url = URL.createObjectURL(new Blob([blob], { type: 'application/pdf' })); link.href = url; link.download = invoiceFile(receipt); document.body.append(link); link.click(); link.remove(); setTimeout(function () { URL.revokeObjectURL(url) }, 60000) }) }
+            payReceipt.addEventListener('click', function (event) { event.preventDefault(); clearTimeout(groupTimer); var label = payReceipt.textContent; payReceipt.textContent = 'Preparing your invoice...'; payReceipt.style.pointerEvents = 'none'; saveInvoice(currentReceipt).then(function () { payGroupNote.textContent = 'Invoice downloaded. Taking you to the WhatsApp invitation now.'; openGroup(currentReceipt.groupUrl, GROUP_AFTER_DOWNLOAD_MS) }, function () { payGroupNote.textContent = 'The invoice could not be downloaded. Please try again.' }).finally(function () { payReceipt.textContent = label; payReceipt.style.pointerEvents = '' }) });
+            payDialog.addEventListener('close', function () { clearTimeout(groupTimer) });
+            payForm.addEventListener('submit', function (event) {
+                event.preventDefault(); var button = payForm.querySelector('[type=submit]'), student = formData(payForm); button.disabled = true; setMessage(payMessage); payForm.querySelectorAll('[data-error]').forEach(function (el) { el.textContent = '' });
+                post('order', student).then(function (result) {
+                    if (!result.success) { setMessage(payMessage, result.message); Object.keys(result.errors || {}).forEach(function (field) { payForm.querySelector('[data-error="' + field + '"]').textContent = result.errors[field] }); return }
+                    return loadCheckout().then(function () { payDialog.close(); openCheckout(result.data, student) }, function () { setMessage(payMessage, 'Could not load Razorpay. Check your connection and try again.') })
+                }).finally(function () { button.disabled = false })
+            });
+            function renderReceipts() { receiptList.textContent = ''; savedReceipts().forEach(function (receipt) { var item = document.createElement('li'), label = document.createElement('span'), link = document.createElement('a'), group = document.createElement('a'); label.textContent = receipt.invoiceNo + ' · ' + receipt.amount + ' · ' + receipt.paymentDate; link.textContent = 'Download'; link.href = receiptUrl(receipt); link.download = invoiceFile(receipt); link.addEventListener('click', function (event) { event.preventDefault(); saveInvoice(receipt).catch(function () { link.textContent = 'Try again' }) }); group.textContent = 'WhatsApp group'; group.href = receipt.groupUrl; item.append(label, link, group); receiptList.append(item) }); receiptList.hidden = !receiptList.children.length }
+            document.getElementById('receiptsButton').addEventListener('click', function () { renderReceipts(); setMessage(findMessage); receiptsDialog.showModal() });
+            findForm.addEventListener('submit', function (event) { event.preventDefault(); var button = findForm.querySelector('[type=submit]'); button.disabled = true; post('find', formData(findForm)).then(function (result) { if (result.success) { saveReceipt(result.data); renderReceipts(); setMessage(findMessage); findForm.reset() } else { setMessage(findMessage, result.message) } }).finally(function () { button.disabled = false }) });
+        })();
+    </script>
+</body>
+
+</html>
