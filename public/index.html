@@ -1183,10 +1183,13 @@
             }
         }
     </style>
+<link rel="stylesheet" href="trust.css">
+<link rel="stylesheet" href="logo-slider.css">
 </head>
 
 <body>
     <div class="announcement">November batch admissions are open. Online across India.</div>
+    <div class="trust-bar" id="trustBar" hidden><div class="container"></div></div>
     <header>
         <div class="container nav"><a class="brand" href="#top"><img src="images/nfskills.png" width="48" height="48" alt=""><span><b>NFskills</b><small>NF Skills × FiveM Infotech</small></span></a><button class="toggle" type="button" aria-label="Open menu" aria-controls="siteMenu" aria-expanded="false">☰</button>
             <nav class="links" id="siteMenu"><a href="#projects">Projects</a><a href="#program">Program</a><a href="#trainers">Trainers</a><a href="#faq">FAQs</a><a href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Accelerator.">WhatsApp us</a><a class="navcta" href="#register">Reserve your seat</a></nav>
@@ -1214,9 +1217,16 @@
                 </dl>
             </div>
         </section>
+        <section class="admission" id="admission" hidden aria-label="Admission information"><div class="container"></div></section>
         <div class="container">
             <ul class="tech" aria-label="Technologies and platforms"><li>Technologies &amp; platforms</li><li>Microsoft Azure</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>Google Cloud</li><li>VMware</li><li>Android</li><li>Apple iOS</li></ul>
         </div>
+        <div id="logosProbe" aria-hidden="true"></div>
+        <section class="logos" id="logos" hidden aria-labelledby="logosTitle">
+            <div class="container logos-head"><p class="label">Tools &amp; brands</p><h2 id="logosTitle">Technologies and brands you will come across.</h2></div>
+            <div class="logo-rows" id="logoRows"></div>
+            <p class="logos-note container">Logos are shown for illustration only. They are trademarks of their respective owners and do not indicate a partnership, employment, sponsorship or endorsement.</p>
+        </section>
         <section class="content tint">
             <div class="container aside">
                 <div>
@@ -1381,6 +1391,12 @@
                 </ul>
             </div>
         </section>
+        <section class="content tint" id="reviews" hidden>
+            <div class="container">
+                <div class="reviews-head"><p class="label">Student reviews</p><h2>What our students say.</h2></div>
+                <ul class="review-grid" id="reviewGrid"></ul>
+            </div>
+        </section>
         <section class="content" id="register" style="padding-top:0">
             <div class="container register">
                 <div>
@@ -1484,6 +1500,8 @@
                 type="submit">Find my invoice</button>
         </form>
     </dialog>
+    <script src="trust.js" defer></script>
+    <script src="logo-slider.js" defer></script>
     <script>
         var menu = document.querySelector('.links'), menuToggle = document.querySelector('.toggle');
         function setMenu(open) { menu.classList.toggle('show', open); menuToggle.setAttribute('aria-expanded', String(open)) }

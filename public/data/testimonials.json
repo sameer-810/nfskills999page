@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Demo Student",
+    "program": "10-Day Production Deployment Accelerator",
+    "feedback": "DEMO ONLY: this is a placeholder testimonial to preview the layout. Replace it with a real student review, or delete it, before going live.",
+    "rating": 4,
+    "photo": "",
+    "googleReviewUrl": "",
+    "googleVerified": false,
+    "linkedinUrl": "",
+    "featured": true
+  }
+]
