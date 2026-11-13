@@ -316,18 +316,93 @@
 
         .tech {
             display: flex;
-            flex-wrap: wrap;
-            gap: 6px 28px;
+            align-items: center;
+            gap: 28px;
             padding: 22px 0;
-            margin: 0;
-            list-style: none;
             font-size: 16px;
-            color: var(--muted)
+            color: var(--muted);
+            white-space: nowrap
         }
 
-        .tech li:first-child {
+        .tech b {
             color: var(--navy);
             font-weight: 600
+        }
+
+        /* one line moving right to left; the list is doubled so moving by half its width loops seamlessly */
+        .tech-window {
+            flex: 1;
+            min-width: 0;
+            overflow: hidden;
+            mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent)
+        }
+
+        .tech-track {
+            display: flex;
+            width: max-content;
+            animation: tech-rtl 28s linear infinite
+        }
+
+        .tech-window:hover .tech-track {
+            animation-play-state: paused
+        }
+
+        .tech ul {
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0 28px 0 0;
+            list-style: none
+        }
+
+        @keyframes tech-rtl {
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .tech-track {
+                animation: none
+            }
+
+            .tech-window {
+                overflow-x: auto;
+                mask-image: none
+            }
+
+            .tech ul[aria-hidden] {
+                display: none
+            }
+        }
+
+        @media(max-width:650px) {
+            .tech {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px
+            }
+        }
+
+        .cert {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+            gap: 48px;
+            align-items: center
+        }
+
+        .cert-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 14px 40px rgba(44, 53, 86, .18)
+        }
+
+        @media(max-width:900px) {
+            .cert {
+                grid-template-columns: 1fr;
+                gap: 28px
+            }
         }
 
         section.content {
@@ -1258,7 +1333,7 @@
         </section>
         <section class="admission" id="admission" hidden aria-label="Admission information"><div class="container"></div></section>
         <div class="container">
-            <ul class="tech" aria-label="Technologies and platforms"><li>Technologies &amp; platforms</li><li>Microsoft Azure</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>Google Cloud</li><li>VMware</li><li>Android</li><li>Apple iOS</li></ul>
+            <div class="tech"><b id="techLabel">Technologies &amp; platforms</b><div class="tech-window"><div class="tech-track"><ul aria-labelledby="techLabel"><li>Microsoft Azure</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>Google Cloud</li><li>VMware</li><li>Android</li><li>Apple iOS</li></ul><ul aria-hidden="true"><li>Microsoft Azure</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>Google Cloud</li><li>VMware</li><li>Android</li><li>Apple iOS</li></ul></div></div></div>
         </div>
         <div id="logosProbe" aria-hidden="true"></div>
         <section class="logos" id="logos" hidden aria-labelledby="logosTitle">
@@ -1428,6 +1503,17 @@
                     <li>Completion certificate<small>Provided after completing the bootcamp.</small></li>
                     <li>Practical learning activities<small>Follow project workflows and guided technical demonstrations.</small></li>
                 </ul>
+            </div>
+        </section>
+        <section class="content" id="certificate">
+            <div class="container cert">
+                <div>
+                    <p class="label">Completion certificate</p>
+                    <h2>Earn your NFskills certificate.</h2>
+                    <p class="lead">Awarded after you successfully complete the 10-day Production Deployment Accelerated Training Program. Your name and date of issue are added when it is issued.</p>
+                    <p class="hero-note">Shown: sample design with placeholder details.</p>
+                </div>
+                <img class="cert-img" src="assets/certificates/nfskills-certificate-sample-800.webp" srcset="assets/certificates/nfskills-certificate-sample-800.webp 800w, assets/certificates/nfskills-certificate-sample-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw" width="1600" height="1131" loading="lazy" decoding="async" alt="Sample NFskills certificate of completion for the Production Deployment Accelerated Training Program, with placeholder student name">
             </div>
         </section>
         <section class="content tint" id="reviews" hidden>

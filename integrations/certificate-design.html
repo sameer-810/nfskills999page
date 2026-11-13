@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- Certificate design, rendered at exactly 1600x1131 px (A4 landscape).
+     #blank      -> lib/certificate-template.mjs (name, date and ID left empty; lib/certificate-pdf.mjs draws them)
+     #watermark  -> public/assets/certificates/* website sample (dummy values + tiled NFskills watermark) -->
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:M;font-weight:400 800;src:url(../public/fonts/manrope-latin.woff2)}
+@font-face{font-family:D;font-weight:400 700;src:url(../public/fonts/dm-sans-latin.woff2)}
+:root{--navy:#2C3556;--orange:#F69125;--accent:#004660;--lb:#EAF4FF;--lg:#F3F5FA;--text:#172B4D}
+*{box-sizing:border-box;margin:0}
+html,body{width:1600px;height:1131px;overflow:hidden;background:#fff}
+body{position:relative;font-family:D,Arial,sans-serif;color:var(--text)}
+.a{position:absolute}
+.c{left:0;width:1600px;text-align:center}
+svg{display:block}
+</style></head><body>
+<!-- light grid paper -->
+<div class="a" style="inset:0;background:linear-gradient(var(--lb) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,var(--lb) 1px,transparent 1px) 0 0/32px 32px;opacity:.7"></div>
+<!-- corner waves -->
+<svg class="a" style="left:0;top:0" width="560" height="300" viewBox="0 0 560 300">
+  <path d="M0 0H560C420 40 300 90 0 300Z" fill="#EAF4FF"/>
+  <path d="M0 0H430C320 40 220 110 0 230Z" fill="#004660"/>
+  <path d="M0 0H300C220 40 140 90 0 160Z" fill="#2C3556"/>
+  <path d="M0 255C220 120 330 50 470 0" stroke="#F69125" stroke-width="8" fill="none"/>
+</svg>
+<svg class="a" style="right:0;bottom:0" width="560" height="300" viewBox="0 0 560 300">
+  <path d="M560 300H0C140 260 260 210 560 0Z" fill="#EAF4FF"/>
+  <path d="M560 300H130C240 260 340 190 560 70Z" fill="#004660"/>
+  <path d="M560 300H260C340 260 420 210 560 140Z" fill="#2C3556"/>
+  <path d="M560 45C340 180 230 250 90 300" stroke="#F69125" stroke-width="8" fill="none"/>
+</svg>
+<!-- frame -->
+<div class="a" style="left:36px;top:36px;right:36px;bottom:36px;border:3px solid var(--navy);border-radius:6px"></div>
+<div class="a" style="left:50px;top:50px;right:50px;bottom:50px;border:1.5px solid var(--orange);border-radius:4px"></div>
+
+<!-- logo + brand -->
+<img class="a" src="../public/images/nfskills.png" style="left:740px;top:84px;width:120px;height:120px">
+<div class="a c" style="top:214px;font:800 30px/36px M,sans-serif;color:var(--navy);letter-spacing:.04em">NF<span style="color:var(--orange)">skills</span></div>
+
+<div class="a c" style="top:278px;font:800 76px/86px M,sans-serif;color:var(--navy);letter-spacing:.12em">CERTIFICATE</div>
+<div class="a c" style="top:366px;font:700 28px/34px M,sans-serif;color:var(--accent);letter-spacing:.38em">OF COMPLETION</div>
+<div class="a" style="left:690px;top:416px;width:220px;height:4px;border-radius:2px;background:var(--orange)"></div>
+
+<div class="a c" style="top:452px;font-size:26px;line-height:32px">This is to certify that</div>
+<div class="a c fill" style="top:496px;font:italic 800 70px/84px M,sans-serif;color:var(--navy)">Student Name</div>
+<div class="a" style="left:470px;top:590px;width:660px;height:2px;background:var(--navy)"></div>
+<div class="a c" style="top:612px;font-size:26px;line-height:32px">has successfully completed the</div>
+<div class="a c" style="top:654px;font:800 38px/48px M,sans-serif;color:var(--accent)">Production Deployment Accelerated Training Program</div>
+<div class="a c" style="top:712px;font-size:24px;line-height:32px;color:var(--text)">10-Day Live Online Training &nbsp;|&nbsp; 20 Hours &nbsp;|&nbsp; Batch starting 16 November 2026</div>
+
+<!-- footer: date, seal, signature -->
+<div class="a" style="left:190px;top:870px;width:330px;text-align:center">
+  <div class="fill" style="font:700 26px/32px M,sans-serif;color:var(--navy)">DD Month YYYY</div>
+  <div style="height:2px;background:var(--navy);margin:10px 0 8px"></div>
+  <div style="font-size:21px">Date of Issue</div>
+</div>
+<div class="a" style="left:690px;top:812px;width:220px;height:220px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 0 0 8px #fff,0 0 0 12px var(--navy)">
+  <div style="width:176px;height:176px;border-radius:50%;border:3px dashed #fff;display:grid;place-items:center;text-align:center;color:var(--navy)">
+    <div><div style="font:800 30px/34px M,sans-serif">NF<span style="color:#fff">skills</span></div><div style="font:800 17px/22px M,sans-serif;letter-spacing:.1em">CERTIFIED</div><div style="font:700 15px/20px M,sans-serif;letter-spacing:.06em">COMPLETION</div></div>
+  </div>
+</div>
+<div class="a" style="left:1080px;top:870px;width:330px;text-align:center">
+  <div style="height:32px"></div>
+  <div style="height:2px;background:var(--navy);margin:10px 0 8px"></div>
+  <div style="font:700 21px/26px M,sans-serif;color:var(--navy)">Authorized Signatory</div>
+  <div style="font-size:19px">NFskills</div>
+</div>
+<div class="a c fill" style="top:1052px;font-size:17px;color:#55647a">Certificate ID: NF/CERT/2026/XXXXXX</div>
+<script>
+if (location.hash.includes('blank')) document.querySelectorAll('.fill').forEach(function (e) { e.style.visibility = 'hidden'; });
+if (location.hash.includes('watermark')) {
+  // small repeated "NFskills" text over the whole certificate, so the website copy cannot be passed off as real
+  var w = document.createElement('div');
+  w.style.cssText = 'position:absolute;left:-600px;top:-700px;width:2800px;height:2600px;transform:rotate(-28deg);display:flex;flex-wrap:wrap;align-content:flex-start;gap:30px 46px;font:800 22px/1 M,sans-serif;color:rgba(44,53,86,.16);pointer-events:none;z-index:9';
+  for (var i = 0; i < 1400; i++) { var s = document.createElement('span'); s.textContent = i % 2 ? 'NFskills' : 'NFskills SAMPLE'; w.appendChild(s); }
+  document.body.appendChild(w);
+}
+</script>
+</body></html>

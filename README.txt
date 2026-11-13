@@ -231,3 +231,18 @@ TROUBLESHOOTING
 - Slider not moving: your device has "reduce motion" turned on. This is intended.
 - Changes not visible after deploying: hard-refresh (Ctrl+F5). The data files are fetched fresh, but files in
   public/images are cached for a year, so give a replaced image a new name.
+
+CERTIFICATES AND THE ADMIN PAGE (/api/admin-login)
+Open https://<your-site>/api/admin-login, sign in with the admin password, type the student's full name and the
+date of issue, and the certificate downloads as an A4 landscape PDF named NFskills-Certificate-<Name>.pdf.
+- Set ADMIN_PASSWORD (at least 12 characters, keep it private) in .env and in the Netlify/Vercel environment
+  variables, then redeploy. Without it the page answers "Admin access is not set up".
+- Names: 2-60 characters, English letters, spaces, dots, hyphens, apostrophes (the PDF font is Latin-only).
+- Certificate ID: NF/CERT/<year>/<6 characters>, computed from the name and date, so re-issuing the same
+  certificate gives the same ID. Nothing is stored; keep your own list of issued certificates.
+- The page is not linked from the site, is marked noindex and is never cached. Each wrong password waits 1 s.
+- Files: lib/admin.mjs (page + API), lib/certificate-pdf.mjs (drawing), lib/certificate-template.mjs
+  (blank background), netlify/functions/admin-login.mjs and api/admin-login.mjs (routes).
+- Design: integrations/certificate-design.html. Render #blank at 1600x1131 for lib/certificate-template.mjs and
+  #watermark for public/assets/certificates/ (the website sample, covered in a small "NFskills" watermark).
+  The batch line "Batch starting 16 November 2026" is part of the design; re-render it for a new batch.

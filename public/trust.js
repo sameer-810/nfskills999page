@@ -82,6 +82,7 @@
             track.appendChild(el('li', { 'class': 't-card', 'aria-roledescription': 'slide', 'aria-label': (i + 1) + ' of ' + list.length }, [
                 el('div', { 'class': 't-photo' }, [img || initial(t.name)]),
                 el('div', { 'class': 't-body' }, [
+                    t.sample === true ? el('span', { 'class': 't-sample', text: 'Sample review' }) : null,
                     typeof t.rating === 'number' && t.rating > 0 ? el('div', { role: 'img', 'aria-label': 'Rated ' + t.rating + ' out of 5' }, [stars(t.rating)]) : null,
                     el('blockquote', { text: '“' + t.review + '”' }),
                     el('div', { 'class': 't-who' }, [el('b', { text: t.name }), t.designation ? el('span', { text: t.designation }) : null, t.course ? el('small', { text: t.course }) : null]),
