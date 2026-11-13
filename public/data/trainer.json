@@ -1,0 +1,9 @@
+{
+  "photo": "trainer-900.webp",
+  "intro": "The training is delivered live by the NFskills trainer team, who guide you through each deployment step on your own project.",
+  "trainers": [
+    { "name": "Sachin Sir", "role": "", "bio": "" },
+    { "name": "Vijay Sir", "role": "", "bio": "" },
+    { "name": "Mohan Sir", "role": "", "bio": "" }
+  ]
+}

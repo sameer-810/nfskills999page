@@ -1,0 +1,91 @@
+/* Components for the 16-section landing page. Colour tokens come from :root in index.html. */
+.center{text-align:center;max-width:760px;margin:0 auto 40px}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* 01 hero */
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:22px 0 0;padding:0}
+.chips li{padding:6px 12px;border-radius:999px;background:var(--light-blue);color:var(--navy);font-size:15px;font-weight:600}
+.hero-price{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:24px 0 0;font:800 40px/1.1 Manrope,sans-serif;color:var(--navy)}
+.hero-price .was{font-size:22px}
+.mock{display:grid;gap:10px}
+.mock-term{display:grid;padding:16px 18px;border-radius:12px;background:var(--navy);color:#c9d4e3;font:14px/1.7 ui-monospace,Consolas,monospace}
+.mock-term span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-term .ok{color:#7ee2a8}
+.mock-arrow{text-align:center;font-size:22px;line-height:1;color:var(--orange)}
+.mock-browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 14px 40px rgba(44,53,86,.14)}
+.mock-bar{display:flex;align-items:center;gap:6px;padding:10px 12px;background:var(--pale);border-bottom:1px solid var(--line)}
+.mock-bar i{flex:none;width:10px;height:10px;border-radius:50%;background:#c9d1dd}
+.mock-bar span{flex:1;min-width:0;margin-left:6px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-bar b{color:var(--green)}
+.mock-page{display:grid;gap:12px;padding:18px}
+.mock-head{display:flex;justify-content:space-between;align-items:center;font:700 18px Manrope,sans-serif;color:var(--navy)}
+.live{padding:3px 10px;border-radius:999px;background:#e7f6ec;color:var(--green);font:700 13px "DM Sans",Arial,sans-serif}
+.mock-lines{display:grid;gap:8px}
+.mock-lines i{height:10px;border-radius:5px;background:var(--light-blue)}
+.mock-lines i:last-child{width:60%}
+.mock-stack{display:flex;flex-wrap:wrap;gap:6px}
+.mock-stack span{padding:4px 10px;border-radius:6px;background:var(--pale);color:var(--navy);font-size:13px;font-weight:600}
+
+/* cards: why join, who should join, technologies, what you deploy */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;list-style:none;margin:0;padding:0}
+.card{padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.card p{margin:8px 0 0;color:var(--muted);font-size:16px}
+.card svg{display:block;width:44px;height:44px;margin-bottom:14px;padding:10px;border-radius:12px;background:var(--light-blue);color:var(--blue);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card .chips{margin-top:14px}
+.card .chips li{font-size:14px;font-weight:500}
+
+/* 04 deployment flow */
+.flow{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 0;list-style:none;margin:0 0 40px;padding:0}
+.flow li{display:flex;align-items:center;font:700 15px Manrope,sans-serif;color:var(--navy)}
+.flow span{padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.flow li:not(:last-child):after{content:"→";margin:0 8px;color:var(--brass);font-size:18px}
+.flow li:last-child span{border-color:var(--orange);background:var(--orange)}
+
+/* 05 localhost vs production */
+.compare{width:100%;border:1px solid var(--line);border-radius:14px;border-collapse:separate;border-spacing:0;overflow:hidden;background:#fff;font-size:16px}
+.compare th,.compare td{padding:16px 20px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
+.compare thead th{border-top:0;background:var(--navy);color:#fff;font:700 16px Manrope,sans-serif}
+.compare tbody th{width:24%;color:var(--navy)}
+.compare td:last-child{background:var(--light-blue);color:var(--navy);font-weight:500}
+.after-note{max-width:70ch;margin:28px auto 0;text-align:center;color:var(--muted)}
+
+/* 08 roadmap: days 1-5 in the left column, 6-10 in the right */
+.days{display:grid;grid-template-rows:repeat(5,auto);grid-auto-flow:column;grid-auto-columns:1fr;gap:14px 24px;list-style:none;margin:44px 0 0;padding:0}
+.days li{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid #4a5578;border-radius:12px;color:#fff;font-weight:600}
+.days b{flex:none;min-width:66px;padding:4px 10px;border-radius:999px;background:var(--orange);color:var(--navy);font:800 14px Manrope,sans-serif;text-align:center}
+
+/* 09 deliverables, 12 certificate, 14 about */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ticks{display:grid;gap:10px;list-style:none;margin:20px 0 0;padding:0}
+.ticks li{position:relative;padding-left:28px}
+.ticks li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+.note-box{padding:28px;border-radius:14px;background:var(--light-blue)}
+.note-box p{margin:10px 0 0}
+.cert-points{margin-top:48px}
+.names li span,.names li p{display:block;margin:2px 0 0;color:var(--muted);font:400 16px/1.5 "DM Sans",Arial,sans-serif}
+.foot-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+
+@media(min-width:1001px){.hero-grid{grid-template-columns:minmax(0,1fr) 440px;gap:56px}}
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:28px}}
+@media(max-width:650px){
+    .visual{max-width:440px}
+    .hero-price{font-size:34px}
+    .cards{grid-template-columns:1fr}
+    .days{grid-template-rows:none;grid-auto-flow:row}
+    .compare thead{display:none}
+    .compare tr{display:block;border-top:1px solid var(--line)}
+    .compare tr:first-child{border-top:0}
+    .compare th,.compare td{display:block;width:auto;border:0;padding:8px 16px}
+    .compare tbody th{width:auto;padding-top:16px}
+    .compare td:before{content:attr(data-l) ": ";font-weight:700}
+    .compare td:last-child{padding-bottom:16px}
+}
+
+/* subtle entrance; only where scroll-driven animation exists, so nothing is ever left hidden */
+@media(prefers-reduced-motion:no-preference){
+    @supports (animation-timeline:view()){
+        .card,.days li{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+        @keyframes rise{from{opacity:0;transform:translateY(16px)}}
+    }
+}

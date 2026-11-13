@@ -75,15 +75,30 @@ The WhatsApp buttons connect to +91 97690 73820.
 The group invitation is kept in WHATSAPP_GROUP_URL (.env and your host), never in the code, and is only sent to the browser after a verified payment. If it is missing, customers are sent to the WhatsApp number above.
 
 CONFIRMED COURSE DETAILS:
-10-Day Production Deployment Accelerator
+Production Deployment Accelerated Training Program (students deploy their own existing project)
 Starts: 16 November 2026
-Timing: 8 PM–10 PM
-Duration: 20 hours
-Mode: Online
-Fee: ₹999
+Timing: 8 PM–10 PM IST
+Duration: 10 days, 20 hours
+Mode: Live online
+Fee: ₹999 (shown with ₹4,999 crossed out, 80% OFF)
 Recordings: Included
 Certificate: After completion
-Trainers: Shakir Sir, Abdullah Sir, Sadiq Sir
+Trainers: listed in public/data/trainer.json
+
+LANDING PAGE SECTIONS (public/index.html, in this order; styles for them are in public/sections.css)
+01 hero · 02 logo slider · 03 why join (#why) · 04 what you deploy (#deploy) · 05 localhost vs production
+(#compare) · 06 who should join (#audience) · 07 technologies (#technologies) · 08 10-day roadmap (#roadmap)
+· 09 deliverables and prerequisites (#deliverables) · 10 trainers (#trainers) · 11 testimonials (#reviews)
+· 12 certificate (#certificate) · 13 why deployment matters (#matters) · 14 about (#about) · 15 FAQ (#faq)
+· 16 final registration (#register).
+Section text is written in index.html so search engines read it without JavaScript. To change the FAQ,
+edit the .faq-item blocks; the FAQ data for search engines is built from them automatically.
+
+TRAINERS (public/data/trainer.json, photo in public/assets/trainer/)
+  "photo"    file name in public/assets/trainer/
+  "intro"    the paragraph under the heading
+  "trainers" list of { "name", "role", "bio" }; an empty role or bio is not shown.
+Only add experience and qualifications that are true.
 
 =====================================================================
 TRUST, SOCIAL PROOF, ADMISSION INFO AND LOGO SLIDER
@@ -205,8 +220,8 @@ LOGO SLIDER (public/data/logos.json, public/assets/logos/)
 
 IMAGES
 Use SVG for logos, or PNG/WebP/AVIF with a transparent background. Student photos: JPG or WebP, square,
-about 200x200 px, under about 30 KB. The hero poster (images/Banner.png) and trainer photo (images/face.png)
-are large (1.2 MB and 1.9 MB); converting them to WebP would speed up the page.
+about 400x400 px, under about 30 KB. The trainer photo is public/assets/trainer/trainer-900.webp (900 px
+wide). The old images/Banner.png and images/face.png are no longer used by the page.
 
 SAMPLE COMPLETE site-config.json
   {

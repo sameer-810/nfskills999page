@@ -1,9 +1,9 @@
 [
   {
-    "id": "dummy-1",
-    "name": "first ",
+    "id": "sachin",
+    "name": "Sachin",
     "designation": "Software Developer",
-    "photo": "student-1.webp",
+    "photo": "student-sachin.webp",
     "review": "My MERN project only ever ran on localhost. In this training I deployed it to a cloud server with my own domain and HTTPS, and now I can explain every step of the deployment in interviews.",
     "rating": null,
     "course": "Production Deployment Accelerated Training Program",
@@ -13,10 +13,10 @@
     "sample": true
   },
   {
-    "id": "dummy-2",
-    "name": "Student Name",
+    "id": "faizal",
+    "name": "Faizal",
     "designation": "MERN Stack Developer",
-    "photo": "",
+    "photo": "student-faizal.webp",
     "review": "Setting up Nginx, the process manager and the SSL certificate step by step finally made deployment click for me. Fixing the errors on my own project, live with the trainer, was the most useful part.",
     "rating": null,
     "course": "Production Deployment Accelerated Training Program",
@@ -26,16 +26,29 @@
     "sample": true
   },
   {
-    "id": "dummy-3",
-    "name": "Student Name",
-    "designation": "Computer Science Student",
-    "photo": "",
-    "review": "I had never worked on a Linux server before. Now my college project is live on its own domain, connected to a production database, and I know how to keep it running.",
+    "id": "inder",
+    "name": "Inder",
+    "designation": "Full Stack Developer",
+    "photo": "student-inder.webp",
+    "review": "I used to copy deployment commands from videos without knowing what they did. Here every command was explained, so when something breaks on the server I know where to look and how to fix it.",
     "rating": null,
     "course": "Production Deployment Accelerated Training Program",
     "video": "",
     "active": true,
     "order": 3,
+    "sample": true
+  },
+  {
+    "id": "shayan",
+    "name": "Shayan",
+    "designation": "Computer Science Student",
+    "photo": "student-1.webp",
+    "review": "I had never worked on a Linux server before. Now my college project is live on its own domain, connected to a production database, and I know how to keep it running.",
+    "rating": null,
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "",
+    "active": true,
+    "order": 4,
     "sample": true
   }
 ]

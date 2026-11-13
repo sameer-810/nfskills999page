@@ -111,6 +111,21 @@
         update();
     }
 
+    // Trainer section: data/trainer.json, photo in assets/trainer/. Empty role/bio fields are simply not shown.
+    function trainer(t) {
+        var names = $('trainerNames'), intro = $('trainerIntro'), photo = $('trainerPhoto');
+        if (!t || !names || !intro || !photo) return;
+        if (t.intro) intro.textContent = t.intro;
+        if (/^[\w][\w.-]*\.(png|jpe?g|webp|avif)$/i.test(t.photo || '')) photo.src = 'assets/trainer/' + t.photo;
+        var list = (Array.isArray(t.trainers) ? t.trainers : []).filter(function (p) { return p && p.name; });
+        if (!list.length) return;
+        names.textContent = '';
+        list.forEach(function (p) {
+            names.appendChild(el('li', {}, [document.createTextNode(p.name), p.role ? el('span', { text: p.role }) : null, p.bio ? el('p', { text: p.bio }) : null]));
+        });
+    }
+
     load('data/site-config.json').then(function (c) { trustBar(c); admission(c); }).catch(function () {});
+    load('data/trainer.json').then(trainer).catch(function () {});
     load('data/testimonials.json').then(reviews).catch(function () {});
 })();
