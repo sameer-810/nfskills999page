@@ -76,7 +76,7 @@ The group invitation is kept in WHATSAPP_GROUP_URL (.env and your host), never i
 
 CONFIRMED COURSE DETAILS:
 10-Day Production Deployment Accelerator
-Starts: 7 November 2026
+Starts: 16 November 2026
 Timing: 8 PM–10 PM
 Duration: 20 hours
 Mode: Online
@@ -159,7 +159,7 @@ The student count is a claim you supply; keep it accurate.
 
 ADMISSION INFO (public/data/site-config.json)
   "admission": {
-    "startDate": "2026-11-07",   YYYY-MM-DD, or null.
+    "startDate": null,   YYYY-MM-DD, or null.
     "closeDate": null,           YYYY-MM-DD, or null. Never shown once it is in the past.
     "timing": "8:00 PM – 10:00 PM IST, live online",
     "status": "",                "" = automatic. Or force: "open", "upcoming", "closed", "waitlist".
