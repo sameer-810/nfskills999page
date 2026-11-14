@@ -75,7 +75,7 @@ The WhatsApp buttons connect to +91 97690 73820.
 The group invitation is kept in WHATSAPP_GROUP_URL (.env and your host), never in the code, and is only sent to the browser after a verified payment. If it is missing, customers are sent to the WhatsApp number above.
 
 CONFIRMED COURSE DETAILS:
-Production Deployment Accelerated Training Program (students deploy their own existing project)
+Production Deployment Training Program (students deploy their own existing project)
 Starts: 18 November 2026
 Timing: 8 PM–10 PM IST
 Duration: 10 days, 20 hours
@@ -141,7 +141,7 @@ slide, with arrow buttons, swipe and keyboard scrolling. One object per student:
     "photo": "asha-rao.jpg",             file in public/assets/testimonials/ (.jpg .jpeg .png .webp .avif)
     "review": "Their own words.",        required
     "rating": 5,                         1-5 stars, or null for none
-    "course": "Production Deployment Accelerated Training Program",
+    "course": "Production Deployment Training Program",
     "video": "https://...",              optional https link, shows "Watch video review"
     "active": true,                      false hides it without deleting it
     "order": 1                           lower numbers come first
@@ -171,15 +171,14 @@ verified amount. No GST row. Check the tax treatment with your accountant before
 TRUST INDICATORS (public/data/site-config.json)
   "studentCount": "10,000+"      Text in the top banner: "Trusted by 10,000+ Students". "" hides it.
   "rating": {
-    "show": true,                Master switch for the "Rated 4.95/5 Stars" chip.
-    "value": 4.95,               Rating from 0 to 5.
-    "reviewCount": null,         Your real number of reviews behind the rating.
-    "source": "Google reviews",  Used in the screen-reader label.
-    "sourceUrl": ""              Optional https link to your public reviews page; makes the chip a link.
+    "show": true,                Master switch for the "Rated 4.9/5 ★★★★★" pill. false hides it.
+    "value": 4.9,                Rating from 0 to 5.
+    "reviewCount": null,         Optional: your real number of reviews; added to the screen-reader label.
+    "source": "Google reviews",  Used in the screen-reader label alongside reviewCount.
+    "sourceUrl": ""              Optional https link to your public reviews page; makes the pill a link.
   }
-The rating chip shows ONLY when show is true AND reviewCount is a number above 0. It is hidden now because
-reviewCount is null. When you have genuine review data, enter the true value and count.
-The student count is a claim you supply; keep it accurate.
+The rating pill shows next to the student count whenever show is true and value is between 0 and 5.
+The student count and the rating are claims you supply; keep them accurate.
 
 ADMISSION INFO (public/data/site-config.json)
   "admission": {

@@ -122,7 +122,7 @@ test('successful flow produces an invoice with the real payment and student', as
   assert.equal(res.headers.get('content-type'), 'application/pdf');
   const pdf = Buffer.from(await res.arrayBuffer()).toString('latin1');
   assert.ok(pdf.startsWith('%PDF-1.4') && pdf.trimEnd().endsWith('%%EOF'));
-  for (const expected of ['Asha Rao', '+91 98123 45678', '999.00', 'Production Deployment Accelerated Training Program', '+91 97690 73820', payment.id, verified.body.data.invoiceNo]) {
+  for (const expected of ['Asha Rao', '+91 98123 45678', '999.00', 'Production Deployment Training Program', '+91 97690 73820', payment.id, verified.body.data.invoiceNo]) {
     assert.ok(pdf.includes(expected), `PDF is missing ${expected}`);
   }
   for (const removed of [body.data.orderId, 'GST', 'Not provided', 'Email']) assert.equal(pdf.includes(removed), false, `PDF still shows ${removed}`);

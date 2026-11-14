@@ -1,9 +1,11 @@
 {
   "photo": "trainer-900.webp",
-  "intro": "The training is delivered live by the NFskills trainer team, who guide you through each deployment step on your own project.",
+  "intro": "To empower every learner with practical skills, real-world experience, and the confidence to turn their knowledge into career opportunities and build a successful future in technology.",
   "trainers": [
-    { "name": "Noor Sir", "role": "", "bio": "" },
-    { "name": "Vijay Sir", "role": "", "bio": "" },
-    { "name": "Mohan Sir", "role": "", "bio": "" }
+    {
+      "name": "Noor Ilahi",
+      "role": "Co-founder, NFskills",
+      "bio": ""
+    }
   ]
 }

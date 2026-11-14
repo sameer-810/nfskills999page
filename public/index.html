@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#2C3556">
     <meta name="description" content="Deploy your own web application to production in a 10-day live online training: cloud server, database, domain, Nginx and SSL. 20 hours, starts 18 November 2026. Register for ₹999.">
 <meta property="og:type" content="website"><meta property="og:site_name" content="NFskills"><meta property="og:locale" content="en_IN"><meta property="og:title" content="Production Deployment Training: Take Your Project Live | NFskills"><meta property="og:description" content="Deploy your own web application to production in a 10-day live online training: cloud server, database, domain, Nginx and SSL. 20 hours, starts 18 November 2026. Register for ₹999."><meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Production Deployment Accelerated Training Program","description":"A 10-day, 20-hour live online training in which students deploy their own existing web application to a production server with a database, domain, Nginx and SSL.","provider":{"@type":"EducationalOrganization","name":"NFskills","telephone":"+91-97690-73820","address":{"@type":"PostalAddress","addressLocality":"Mumbai","postalCode":"400088","addressCountry":"IN"}},"inLanguage":"en","teaches":["Cloud server setup","Linux server configuration","Nginx","Domain and DNS configuration","SSL and HTTPS","Database deployment","CI/CD","Deployment troubleshooting"],"offers":{"@type":"Offer","category":"Paid","price":"999","priceCurrency":"INR"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","startDate":"2026-11-18","courseWorkload":"PT20H"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"Production Deployment Training Program","description":"A 10-day, 20-hour live online training in which students deploy their own existing web application to a production server with a database, domain, Nginx and SSL.","provider":{"@type":"EducationalOrganization","name":"NFskills","telephone":"+91-97690-73820","address":{"@type":"PostalAddress","addressLocality":"Mumbai","postalCode":"400088","addressCountry":"IN"}},"inLanguage":"en","teaches":["Cloud server setup","Linux server configuration","Nginx","Domain and DNS configuration","SSL and HTTPS","Database deployment","CI/CD","Deployment troubleshooting"],"offers":{"@type":"Offer","category":"Paid","price":"999","priceCurrency":"INR"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","startDate":"2026-11-18","courseWorkload":"PT20H"}}</script>
     <title>Production Deployment Training: Take Your Project Live | NFskills</title>
     <link rel="icon" type="image/png" href="images/nfskills%20fav.png">
     <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -89,6 +89,22 @@
             font-weight: 700;
             line-height: 1.1;
             letter-spacing: -.03em
+        }
+
+        .hero-title {
+            text-transform: uppercase;
+            font-size: clamp(30px, 3.6vw, 46px);
+            letter-spacing: -.015em
+        }
+
+        .hero-hl {
+            display: block;
+            width: fit-content;
+            margin-top: 12px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: var(--navy);
+            color: #fff
         }
 
         h2 {
@@ -257,7 +273,7 @@
         }
 
         .hero {
-            padding: 64px 0 0
+            padding: 16px 0 0
         }
 
         .hero-grid {
@@ -349,9 +365,9 @@
 
         .tech ul {
             display: flex;
-            gap: 28px;
+            gap: 0;
             margin: 0;
-            padding: 0 28px 0 0;
+            padding: 0;
             list-style: none
         }
 
@@ -1202,7 +1218,7 @@
             }
 
             .hero {
-                padding-top: 40px
+                padding-top: 12px
             }
 
             .hero-grid {
@@ -1283,7 +1299,7 @@
     <div class="trust-bar" id="trustBar" hidden><div class="container"></div></div>
     <header>
         <div class="container nav"><a class="brand" href="#top"><img src="images/nfskills.png" width="48" height="48" alt=""><span><b>NFskills</b><small>Production deployment training</small></span></a><button class="toggle" type="button" aria-label="Open menu" aria-controls="siteMenu" aria-expanded="false">☰</button>
-            <nav class="links" id="siteMenu"><a href="#deploy">What you deploy</a><a href="#roadmap">Roadmap</a><a href="#trainers">Our vision</a><a href="#faq">FAQs</a><a href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Accelerated%20Training%20Program.">WhatsApp us</a><a class="navcta js-pay" href="#register">Pay ₹999 &amp; Register</a></nav>
+            <nav class="links" id="siteMenu"><a href="#deploy">What you deploy</a><a href="#roadmap">Roadmap</a><a href="#trainers">Our vision</a><a href="#faq">FAQs</a><a href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Training%20Program.">WhatsApp us</a><a class="navcta js-pay" href="#register">Pay &amp; Register</a></nav>
         </div>
     </header>
     <main id="top">
@@ -1292,23 +1308,27 @@
             <div class="container">
                 <div class="hero-grid">
                     <div>
-                        <p class="label">Production Deployment Accelerated Training Program</p>
-                        <h1>Stop Running Projects Only on Localhost. Learn to Deploy Them to Production!</h1>
+                        <p class="label">Production Deployment Training Program</p>
+                        <h1 class="hero-title">Stop Running Projects Only on Localhost. <span class="hero-hl">Learn to Deploy in production!</span></h1>
                         <p class="lead">Learn how to deploy your existing web applications, configure production servers, connect databases, manage domains, configure SSL and make your applications accessible to real users.</p>
-                        <ul class="chips" aria-label="Batch details"><li>Live online training</li><li>10 days</li><li>20 hours</li><li>Starts 18 November 2026</li><li>Deploy your own project, hands-on</li></ul>
-                        <p class="hero-price"><s class="was"><span class="sr">Original price </span>₹4,999</s><span><span class="sr">Now </span>₹999</span><span class="off">80% OFF</span></p>
-                        <div class="actions"><a class="btn primary js-pay" href="#register">Pay ₹999 &amp; Register</a><a class="btn secondary" href="#roadmap">See the 10-day roadmap</a></div>
+                        <ul class="hero-facts" aria-label="Batch details"><li><small>Format</small><b><i class="live-dot" aria-hidden="true"></i>Live</b></li><li><small>Duration</small><b>10 days</b></li><li><small>Total time</small><b>20 hours</b></li><li><small>Starts</small><b>18 November 2026</b></li></ul>
+                        <div class="countdown cd-mini" data-countdown data-no-cta hidden></div>
+                        <p class="hero-price"><span class="now"><span class="sr">Now </span>₹999</span><span class="save"><s class="was"><span class="sr">Original price </span>₹4,999</s><span>You save ₹4,000</span></span><span class="off">80% OFF</span><span class="seats">Limited seats available</span></p>
+                        <div class="actions"><a class="btn primary js-pay" href="#register">Pay &amp; Register</a><a class="btn secondary" href="#roadmap">See the 10-day roadmap</a></div>
                         <p class="hero-note">Session recordings and a completion certificate are included.</p>
                     </div>
-                    <div class="visual mock" role="img" aria-label="Illustration: a project is pushed to a cloud server and goes live on its own secure domain">
-                        <div class="mock-term" aria-hidden="true"><span>$ git push origin main</span><span>$ ssh ubuntu@your-server</span><span class="ok">✔ nginx configuration ok</span><span class="ok">✔ SSL certificate issued</span></div>
+                    <div class="visual mock" role="img" aria-label="Illustration: a project is pushed to a cloud server, its frontend, backend and database are deployed, the domain, Nginx, SSL and CI/CD are set up, and it goes live on its own secure domain">
+                        <div class="mock-local" aria-hidden="true"><div class="mock-bar"><i></i><i></i><i></i><span>localhost:3000</span></div><div class="mock-local-body"><div class="mock-head">Your project<span class="offline">● Only on your laptop</span></div><div class="mock-logos"><img src="assets/logos/development/react-js.svg" alt="" height="24" decoding="async"><img src="assets/logos/development/node-js.svg" alt="" height="24" decoding="async"><img src="assets/logos/development/mongodb.svg" alt="" height="24" decoding="async"><img src="assets/logos/development/mysql.svg" alt="" height="24" decoding="async"><img src="assets/logos/development/github.svg" alt="" height="24" decoding="async"></div></div></div>
+                        <div class="mock-arrow first" aria-hidden="true">↓</div>
+                        <div class="mock-term" aria-hidden="true"><em class="mock-term-bar"><i></i><i></i><i></i>ubuntu@your-server</em><span class="cmd" style="--i:0">$ ssh ubuntu@your-server</span><span class="ok" style="--i:1">✔ cloud server ready</span><span class="cmd" style="--i:2">$ git push origin main</span><span class="ok" style="--i:3">✔ frontend &amp; backend deployed</span><span class="ok" style="--i:4">✔ database connected</span><span class="ok" style="--i:5">✔ domain, DNS + Nginx set up</span><span class="ok" style="--i:6">✔ SSL certificate issued</span><span class="ok" style="--i:7">✔ CI/CD pipeline passed</span><span class="mock-cursor" style="--i:8">$ <i></i></span></div>
+                        <ol class="mock-pipe" aria-hidden="true"><li style="--d:1.00s"><span><img src="assets/logos/cloud/aws.svg" alt="" height="20" decoding="async"></span>Server</li><li style="--d:1.84s"><span><img src="assets/logos/development/github.svg" alt="" height="20" decoding="async"></span>Code</li><li style="--d:2.68s"><span><img src="assets/logos/development/mongodb.svg" alt="" height="20" decoding="async"></span>Database</li><li style="--d:3.52s"><span><img src="assets/logos/infrastructure/nginx.svg" alt="" height="20" decoding="async"></span>Nginx</li><li style="--d:4.36s"><span><img src="assets/logos/infrastructure/ssl-https.svg" alt="" height="20" decoding="async"></span>SSL</li><li style="--d:5.20s"><span><img src="assets/logos/infrastructure/ci-cd.svg" alt="" height="20" decoding="async"></span>CI/CD</li></ol>
                         <div class="mock-arrow" aria-hidden="true">↓</div>
                         <div class="mock-browser" aria-hidden="true">
                             <div class="mock-bar"><i></i><i></i><i></i><span><b>https://</b>yourproject.com</span></div>
                             <div class="mock-page">
                                 <div class="mock-head">Your project<span class="live">● Live</span></div>
                                 <div class="mock-lines"><i></i><i></i><i></i></div>
-                                <div class="mock-stack"><span>Frontend</span><span>Backend API</span><span>Database</span></div>
+                                <div class="mock-stack"><span>Frontend</span><span>Backend API</span><span>Database</span><span>Nginx</span><span>SSL</span><span>CI/CD</span></div>
                             </div>
                         </div>
                     </div>
@@ -1326,7 +1346,7 @@
         <section class="admission" id="admission" hidden aria-label="Admission information"><div class="container"></div></section>
         <!-- 02 technology and company logo slider -->
         <div class="container">
-            <div class="tech"><b id="techLabel">Technologies &amp; platforms</b><div class="tech-window"><div class="tech-track"><ul aria-labelledby="techLabel"><li>AWS EC2</li><li>Microsoft Azure</li><li>Linux</li><li>Ubuntu</li><li>Nginx</li><li>Git &amp; GitHub</li><li>CI/CD</li><li>DNS</li><li>SSL &amp; HTTPS</li><li>MongoDB</li><li>MySQL</li></ul><ul aria-hidden="true"><li>AWS EC2</li><li>Microsoft Azure</li><li>Linux</li><li>Ubuntu</li><li>Nginx</li><li>Git &amp; GitHub</li><li>CI/CD</li><li>DNS</li><li>SSL &amp; HTTPS</li><li>MongoDB</li><li>MySQL</li></ul></div></div></div>
+            <div class="tech"><b id="techLabel">Technologies &amp; platforms</b><div class="tech-window"><div class="tech-track"><ul aria-labelledby="techLabel"><li class="logo-item"><img src="assets/logos/cloud/aws.svg" alt="" height="30" decoding="async"><span>AWS EC2</span></li><li class="logo-item"><img src="assets/logos/cloud/microsoft-azure.svg" alt="" height="30" decoding="async"><span>Microsoft Azure</span></li><li class="logo-item"><img src="assets/logos/cloud/linux.svg" alt="" height="30" decoding="async"><span>Linux</span></li><li class="logo-item"><img src="assets/logos/infrastructure/ubuntu.svg" alt="" height="30" decoding="async"><span>Ubuntu</span></li><li class="logo-item"><img src="assets/logos/infrastructure/nginx.svg" alt="" height="30" decoding="async"><span>Nginx</span></li><li class="logo-item"><img src="assets/logos/development/github.svg" alt="" height="30" decoding="async"><span>Git &amp; GitHub</span></li><li class="logo-item concept"><img src="assets/logos/infrastructure/ci-cd.svg" alt="" height="30" decoding="async"><span>CI/CD</span></li><li class="logo-item concept"><img src="assets/logos/infrastructure/dns.svg" alt="" height="30" decoding="async"><span>DNS</span></li><li class="logo-item concept"><img src="assets/logos/infrastructure/ssl-https.svg" alt="" height="30" decoding="async"><span>SSL &amp; HTTPS</span></li><li class="logo-item"><img src="assets/logos/development/mongodb.svg" alt="" height="30" decoding="async"><span>MongoDB</span></li><li class="logo-item"><img src="assets/logos/development/mysql.svg" alt="" height="30" decoding="async"><span>MySQL</span></li></ul><ul aria-hidden="true"><li class="logo-item"><img src="assets/logos/cloud/aws.svg" alt="" height="30" decoding="async"><span>AWS EC2</span></li><li class="logo-item"><img src="assets/logos/cloud/microsoft-azure.svg" alt="" height="30" decoding="async"><span>Microsoft Azure</span></li><li class="logo-item"><img src="assets/logos/cloud/linux.svg" alt="" height="30" decoding="async"><span>Linux</span></li><li class="logo-item"><img src="assets/logos/infrastructure/ubuntu.svg" alt="" height="30" decoding="async"><span>Ubuntu</span></li><li class="logo-item"><img src="assets/logos/infrastructure/nginx.svg" alt="" height="30" decoding="async"><span>Nginx</span></li><li class="logo-item"><img src="assets/logos/development/github.svg" alt="" height="30" decoding="async"><span>Git &amp; GitHub</span></li><li class="logo-item concept"><img src="assets/logos/infrastructure/ci-cd.svg" alt="" height="30" decoding="async"><span>CI/CD</span></li><li class="logo-item concept"><img src="assets/logos/infrastructure/dns.svg" alt="" height="30" decoding="async"><span>DNS</span></li><li class="logo-item concept"><img src="assets/logos/infrastructure/ssl-https.svg" alt="" height="30" decoding="async"><span>SSL &amp; HTTPS</span></li><li class="logo-item"><img src="assets/logos/development/mongodb.svg" alt="" height="30" decoding="async"><span>MongoDB</span></li><li class="logo-item"><img src="assets/logos/development/mysql.svg" alt="" height="30" decoding="async"><span>MySQL</span></li></ul></div></div></div>
         </div>
         <div id="logosProbe" aria-hidden="true"></div>
         <section class="logos" id="logos" hidden aria-labelledby="logosTitle">
@@ -1466,10 +1486,11 @@
         <section class="content tint" id="trainers">
             <div class="container trainers"><img class="trainer-photo" id="trainerPhoto" src="assets/trainer/trainer-900.webp" width="900" height="755" loading="lazy" decoding="async" alt="NFskills trainer">
                 <div>
-                    <p class="label">Meet your trainers</p>
-                    <h2>Guided live by the NFskills trainer team.</h2>
-                    <p class="lead" id="trainerIntro">The training is delivered live by the NFskills trainer team, who guide you through each deployment step on your own project.</p>
-                    <ul class="names" id="trainerNames"><li>Noor Ilahi Sir</li><li>Vijay Sir</li><li>Mohan Sir</li></ul>
+                    <h2>Our Vision</h2>
+                    <p class="lead" id="trainerIntro">To empower every learner with practical skills, real-world experience, and the confidence to turn their knowledge into career opportunities and build a successful future in technology.</p>
+                    <ul class="names" id="trainerNames"><li>Noor Ilahi<span>Co-founder, NFskills</span></li></ul>
+                    <h2 class="why-title">Why We Do This</h2>
+                    <p class="lead">Many developers can build projects but lack the practical experience to take them live. At NFskills, we want to bridge this gap by helping you deploy real projects, gain hands-on industry-relevant experience, and build the confidence to showcase your skills to employers.</p>
                 </div>
             </div>
         </section>
@@ -1487,10 +1508,10 @@
                     <div>
                         <p class="label">Certificate and career value</p>
                         <h2>Earn your NFskills certificate.</h2>
-                        <p class="lead">Awarded after you successfully complete the 10-day Production Deployment Accelerated Training Program.</p>
+                        <p class="lead">Awarded after you successfully complete the 10-day Production Deployment Training Program.</p>
                         <p class="hero-note">Shown: certificate design with placeholder details. It is a certificate of completion from NFskills, not a university or government accreditation.</p>
                     </div>
-                    <img class="cert-img" src="assets/certificates/nfskills-certificate-sample-800.webp" srcset="assets/certificates/nfskills-certificate-sample-800.webp 800w, assets/certificates/nfskills-certificate-sample-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw" width="1600" height="1131" loading="lazy" decoding="async" alt="NFskills certificate of completion design for the Production Deployment Accelerated Training Program, with placeholder student name">
+                    <img class="cert-img" src="assets/certificates/nfskills-certificate-sample-800.webp" srcset="assets/certificates/nfskills-certificate-sample-800.webp 800w, assets/certificates/nfskills-certificate-sample-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 60vw" width="1600" height="1131" loading="lazy" decoding="async" alt="NFskills certificate of completion design for the Production Deployment Training Program, with placeholder student name">
                 </div>
                 <ul class="cards cert-points">
                     <li class="card"><h3>Completion requirements</h3><p>Take part in the live sessions and complete the 10-day program.</p></li>
@@ -1539,7 +1560,7 @@
                     <p><b>WhatsApp:</b> <a href="https://wa.me/919769073820">+91 97690 73820</a></p>
                     <p><b>Location:</b> Mumbai – 400088, India</p>
                     <p><b>Training:</b> live online, 8:00 PM – 10:00 PM IST</p>
-                    <a class="text-link" href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Accelerated%20Training%20Program.">Chat with our team</a>
+                    <a class="text-link" href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Training%20Program.">Chat with our team</a>
                 </div>
             </div>
         </section>
@@ -1603,13 +1624,13 @@
                 <div>
                     <p class="label">November batch, registration open</p>
                     <h2>Your Journey From Localhost to Production Starts Here!</h2>
-                    <p>Join the Production Deployment Accelerated Training Program and work toward putting your own project live.</p>
+                    <p>Join the Production Deployment Training Program and work toward putting your own project live.</p>
                     <p class="when">18 November 2026 · 10 Days / 20 Hours · Live online, 8 PM–10 PM IST</p>
                     <div class="countdown" data-countdown data-no-cta hidden></div>
                 </div>
                 <div class="checkout"><small>Registration fee</small><div class="price"><s class="was"><span class="sr">Original price </span>₹4,999</s><strong><span class="sr">Now </span>₹999</strong><span class="off">80% OFF</span></div>
-                    <p>One-time fee for the complete 10-day program.</p><button class="btn primary" id="payButton" type="button">Pay ₹999 &amp; Register</button>
-                    <div class="checkout-links"><a href="https://wa.me/919769073820?text=Hi%2C%20I%20want%20to%20register%20for%20the%20Production%20Deployment%20Accelerated%20Training%20Program.">Register on WhatsApp instead</a><a href="https://wa.me/919769073820">Questions? Chat with our team</a><button class="link-button" id="receiptsButton" type="button">Find my invoice</button></div>
+                    <p>One-time fee for the complete 10-day program.</p><button class="btn primary" id="payButton" type="button">Pay &amp; Register</button>
+                    <div class="checkout-links"><a href="https://wa.me/919769073820?text=Hi%2C%20I%20want%20to%20register%20for%20the%20Production%20Deployment%20Training%20Program.">Register on WhatsApp instead</a><a href="https://wa.me/919769073820">Questions? Chat with our team</a><button class="link-button" id="receiptsButton" type="button">Find my invoice</button></div>
                 </div>
             </div>
         </section>
@@ -1617,19 +1638,19 @@
     <footer>
         <div class="container">
             <div class="foot">
-                <div class="footbrand"><img src="images/nfskills.png" width="48" height="48" loading="lazy" alt=""><b>NFskills<small>Production deployment training</small></b></div><div class="foot-actions"><a href="https://wa.me/919769073820">WhatsApp: +91 97690 73820</a><a class="btn primary js-pay" href="#register">Pay ₹999 &amp; Register</a></div>
+                <div class="footbrand"><img src="images/nfskills.png" width="48" height="48" loading="lazy" alt=""><b>NFskills<small>Production deployment training</small></b></div><div class="foot-actions"><a href="https://wa.me/919769073820">WhatsApp: +91 97690 73820</a><a class="btn primary js-pay" href="#register">Pay &amp; Register</a></div>
             </div>
             <div class="copyright"><span>© 2026 NFskills</span><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></div>
         </div>
     </footer>
     <div class="sticky-reg" id="stickyReg" hidden>
         <div class="container sr-row">
-            <div class="sr-info"><b><span class="sr-long">Production Deployment Accelerated Training Program</span><span class="sr-short">Production Deployment Program</span></b><span class="sr-meta">10 Days | 20 Hours | Live Online<span class="sr-date"> · Starts 18 Nov</span></span><span class="off sr-off">80% OFF</span></div>
-            <div class="sr-cd"><small data-cd-label>Registration closes in</small><div class="sr-digits" aria-hidden="true"><span><b data-cd>00</b>d</span><span><b data-cd>00</b>h</span><span><b data-cd>00</b>m</span><span><b data-cd>00</b>s</span></div></div>
-            <div class="sr-buy"><span class="sr-price"><s><span class="sr">Original price </span>₹4,999</s><strong><span class="sr">Now </span>₹999</strong></span><span class="sr-btns"><a class="btn primary js-pay" href="#register">Pay ₹999 &amp; Register</a><a class="btn sr-wa" href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Accelerated%20Training%20Program.">WhatsApp</a></span></div>
+            <div class="sr-info"><b><span class="sr-long">Production Deployment Training Program</span><span class="sr-short">Production Deployment Program</span></b><span class="sr-meta">10 Days | 20 Hours | Live Online<span class="sr-date"> · Starts 18 Nov</span></span><span class="sr-seats-in">Limited seats available</span><span class="off sr-off">80% OFF</span></div>
+            <p class="sr-seats">Limited seats available</p><div class="sr-cd"><small data-cd-label>Registration closes in</small><div class="sr-digits" aria-hidden="true"><span><b data-cd>00</b>d</span><span><b data-cd>00</b>h</span><span><b data-cd>00</b>m</span><span><b data-cd>00</b>s</span></div></div>
+            <div class="sr-buy"><span class="sr-price"><s><span class="sr">Original price </span>₹4,999</s><strong><span class="sr">Now </span>₹999</strong></span><span class="sr-btns"><a class="btn primary js-pay" href="#register">Pay &amp; Register</a><a class="btn sr-wa" href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Training%20Program.">WhatsApp</a></span></div>
         </div>
     </div>
-    <a class="wa" href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Accelerated%20Training%20Program.">WhatsApp</a>
+    <a class="wa" href="https://wa.me/919769073820?text=Hi%2C%20I%E2%80%99m%20interested%20in%20the%20Production%20Deployment%20Training%20Program.">WhatsApp</a>
     <dialog class="pay-dialog" id="payDialog" aria-labelledby="payTitle">
         <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
         <form id="payForm">
@@ -1682,6 +1703,7 @@
     <script src="countdown.js" defer></script>
     <script src="trust.js" defer></script>
     <script src="logo-slider.js" defer></script>
+    <script src="hero-mock.js" defer></script>
     <script>
         var menu = document.querySelector('.links'), menuToggle = document.querySelector('.toggle');
         function setMenu(open) { menu.classList.toggle('show', open); menuToggle.setAttribute('aria-expanded', String(open)) }
@@ -1710,7 +1732,7 @@
             }
             function loadCheckout() { return new Promise(function (resolve, reject) { if (window.Razorpay) return resolve(); var script = document.createElement('script'); script.src = 'https://checkout.razorpay.com/v1/checkout.js'; script.onload = resolve; script.onerror = reject; document.head.appendChild(script) }) }
             function verify(response) { showResult('Verifying your payment. Please do not close this page.'); post('verify', { orderId: response.razorpay_order_id, paymentId: response.razorpay_payment_id, signature: response.razorpay_signature }).then(function (result) { if (result.success) { saveReceipt(result.data); showResult('Payment successful. Invoice no. ' + result.data.invoiceNo + '.', 'good', result.data) } else { showResult('We could not verify this payment yet. If money was deducted, keep your payment ID ' + response.razorpay_payment_id + ' and use Find my invoice, or contact us on WhatsApp.', 'bad') } }) }
-            function openCheckout(order, student) { var failure = ''; var checkout = new window.Razorpay({ key: order.keyId, order_id: order.orderId, amount: order.amount, currency: order.currency, name: 'NFskills', description: 'Production Deployment Accelerated Training Program', prefill: { name: student.name, contact: '+91' + student.phone }, theme: { color: '#004660' }, handler: verify, modal: { ondismiss: function () { showForm(failure ? 'Payment failed: ' + failure + ' You have not been registered. Please try again.' : 'Payment cancelled. You have not been charged.') } } }); checkout.on('payment.failed', function (event) { failure = event.error.description || 'the bank declined it.' }); checkout.open() }
+            function openCheckout(order, student) { var failure = ''; var checkout = new window.Razorpay({ key: order.keyId, order_id: order.orderId, amount: order.amount, currency: order.currency, name: 'NFskills', description: 'Production Deployment Training Program', prefill: { name: student.name, contact: '+91' + student.phone }, theme: { color: '#004660' }, handler: verify, modal: { ondismiss: function () { showForm(failure ? 'Payment failed: ' + failure + ' You have not been registered. Please try again.' : 'Payment cancelled. You have not been charged.') } } }); checkout.on('payment.failed', function (event) { failure = event.error.description || 'the bank declined it.' }); checkout.open() }
             document.getElementById('payButton').addEventListener('click', function () { showForm() });
             // Delegated, so CTAs added later by countdown.js work too.
             document.addEventListener('click', function (event) { var cta = event.target.closest && event.target.closest('.js-pay'); if (cta) { event.preventDefault(); showForm() } });

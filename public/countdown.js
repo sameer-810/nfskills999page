@@ -27,7 +27,7 @@
             return v;
         });
         if (!box.hasAttribute('data-no-cta')) {
-            var cta = box.appendChild(el('a', 'btn primary js-pay cd-cta', 'Pay ₹999 & Register'));
+            var cta = box.appendChild(el('a', 'btn primary js-pay cd-cta', 'Pay & Register'));
             cta.href = '#register';
         }
         box.hidden = false;

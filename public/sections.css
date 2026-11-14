@@ -5,8 +5,21 @@
 /* 01 hero */
 .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:22px 0 0;padding:0}
 .chips li{padding:6px 12px;border-radius:999px;background:var(--light-blue);color:var(--navy);font-size:15px;font-weight:600}
-.hero-price{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:24px 0 0;font:800 40px/1.1 Manrope,sans-serif;color:var(--navy)}
-.hero-price .was{font-size:22px}
+.hero-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;list-style:none;margin:22px 0 0;padding:0}
+.hero-facts li{display:grid;gap:4px;align-content:center;justify-items:center;text-align:center;padding:14px 16px;border-radius:12px;background:var(--navy);box-shadow:0 6px 18px rgba(44,53,86,.08)}
+.hero-facts small{color:#c9d4e3;font-size:13px;font-weight:500}
+.hero-facts b{font:700 16px/1.3 Manrope,sans-serif;color:#fff}
+@media (max-width:700px){.hero-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.hero-facts b{display:inline-flex;align-items:center;gap:8px}
+.live-dot{flex:none;width:10px;height:10px;border-radius:50%;background:#ff3b30;box-shadow:0 0 0 0 rgba(255,59,48,.6);animation:live-pulse 1.6s ease-out infinite}
+@keyframes live-pulse{to{box-shadow:0 0 0 8px rgba(255,59,48,0)}}
+@media(prefers-reduced-motion:reduce){.live-dot{animation:none}}
+.hero-price .seats{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid #f6c7c1;border-radius:999px;background:#fdecea;color:#b42318;font:700 14px/1.3 "DM Sans",Arial,sans-serif;letter-spacing:0;white-space:nowrap}
+.hero-price .seats::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:#e5484d}
+.hero-price{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin:16px 0 0;padding:14px 18px;border-radius:12px;background:var(--navy);box-shadow:0 6px 18px rgba(44,53,86,.08);font:800 54px/1 Manrope,sans-serif;letter-spacing:-.03em;color:#fff}
+.hero-price .save{display:grid;gap:3px;font:700 14px/1.2 "DM Sans",Arial,sans-serif;letter-spacing:0;color:#7ee2a8}
+.hero-price .was{font:600 20px/1.1 Manrope,sans-serif;color:#c9d4e3;text-decoration-color:#ff6b6b;text-decoration-thickness:2px}
+.hero-price .off{padding:7px 14px;background:linear-gradient(135deg,#ffb04d,#f69125);font:800 15px/1.3 Manrope,sans-serif;letter-spacing:.04em;box-shadow:0 6px 14px rgba(246,145,37,.35)}
 .mock{display:grid;gap:10px}
 .mock-term{display:grid;padding:16px 18px;border-radius:12px;background:var(--navy);color:#c9d4e3;font:14px/1.7 ui-monospace,Consolas,monospace}
 .mock-term span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -21,7 +34,59 @@
 .mock-head{display:flex;justify-content:space-between;align-items:center;font:700 18px Manrope,sans-serif;color:var(--navy)}
 .live{padding:3px 10px;border-radius:999px;background:#e7f6ec;color:var(--green);font:700 13px "DM Sans",Arial,sans-serif}
 .mock-lines{display:grid;gap:8px}
-.mock-lines i{height:10px;border-radius:5px;background:var(--light-blue)}
+/* hero illustration: localhost card, terminal title bar and the logo pipeline; it stretches to the height of the hero text */
+.hero-grid .mock{align-self:stretch;align-content:space-between}
+.mock-local{border:1px dashed #b9c3d4;border-radius:12px;overflow:hidden;background:#fff}
+.mock-local-body{display:grid;gap:12px;padding:14px 18px}
+.mock-local .mock-head{flex-wrap:wrap;gap:6px 8px;font-size:17px}
+.offline{padding:3px 10px;border-radius:999px;background:#fdecea;color:#b42318;font:700 12px "DM Sans",Arial,sans-serif;white-space:nowrap}
+.mock-logos{display:flex;align-items:center;gap:16px}
+.mock-logos img{height:24px;width:auto}
+.mock-arrow.first{color:#9aa6ba}
+.mock-term-bar{display:flex;align-items:center;gap:6px;margin-bottom:8px;font-style:normal;font-size:12px;color:#93a0bb}
+.mock-term-bar i{width:9px;height:9px;border-radius:50%;background:#ff5f57}
+.mock-term-bar i:nth-child(2){background:#febc2e}
+.mock-term-bar i:nth-child(3){margin-right:6px;background:#28c840}
+.mock-pipe{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:0;padding:4px 0 0;list-style:none}
+.mock-pipe::before,.mock-pipe::after{content:"";position:absolute;left:8.33%;right:8.33%;top:23px;height:3px;border-radius:2px;background:var(--line)}
+.mock-pipe::after{background:linear-gradient(90deg,#138044,#7ee2a8);transform-origin:left}
+.mock-pipe li{position:relative;z-index:1;display:grid;justify-items:center;gap:5px;font:600 11px/1.2 "DM Sans",Arial,sans-serif;color:var(--navy)}
+.mock-pipe span{display:grid;place-items:center;width:40px;height:40px;border:2px solid #138044;border-radius:50%;background:#fff;box-shadow:0 4px 10px rgba(44,53,86,.12)}
+.mock-pipe img{width:20px;height:20px;object-fit:contain}
+@media(max-width:1100px){.mock-pipe li{font-size:10px}.mock-pipe span{width:36px;height:36px}.mock-pipe img{width:18px;height:18px}.mock-pipe::before,.mock-pipe::after{top:21px}}
+/* hero illustration animation: hero-mock.js adds .play and replays it; without it everything is simply visible */
+.mock-cursor i{display:inline-block;width:8px;height:15px;vertical-align:-2px;background:#7ee2a8;animation:mock-blink 1s steps(1) infinite}
+.live{animation:mock-live 1.8s ease-out infinite}
+.mock-lines i{background:linear-gradient(90deg,var(--light-blue) 0%,#f6faff 50%,var(--light-blue) 100%);background-size:200% 100%;animation:mock-shimmer 2.4s linear infinite}
+.mock.play .mock-term span{animation:mock-in .4s ease-out both;animation-delay:calc(var(--i)*.7s + .3s)}
+.mock.play .mock-term .cmd{animation-name:mock-type;animation-duration:.7s;animation-timing-function:steps(24)}
+.mock.play .mock-arrow:not(.first){animation:mock-in .4s ease-out 6.6s both,mock-bounce 1.2s ease-in-out 7s infinite}
+.mock.play .mock-pipe::after{animation:mock-fill 4.2s linear 1s both}
+.mock.play .mock-pipe li{animation:mock-node .5s ease-out both;animation-delay:var(--d)}
+.mock.play .mock-pipe span{animation:mock-ring .5s ease-out both;animation-delay:var(--d)}
+@keyframes mock-fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mock-node{from{opacity:.45;filter:grayscale(1)}to{opacity:1;filter:none}}
+@keyframes mock-ring{from{border-color:#c9d1dd;transform:scale(.85)}60%{transform:scale(1.14)}to{border-color:#138044;transform:none}}
+.mock.play .mock-browser{animation:mock-pop .6s cubic-bezier(.2,.8,.2,1) 7s both}
+.mock.play .mock-stack span{animation:mock-chip .35s ease-out both}
+.mock.play .mock-stack span:nth-child(1){animation-delay:7.6s}
+.mock.play .mock-stack span:nth-child(2){animation-delay:7.75s}
+.mock.play .mock-stack span:nth-child(3){animation-delay:7.9s}
+.mock.play .mock-stack span:nth-child(4){animation-delay:8.05s}
+.mock.play .mock-stack span:nth-child(5){animation-delay:8.2s}
+.mock.play .mock-stack span:nth-child(6){animation-delay:8.35s}
+.mock.play .live{animation:mock-chip .4s ease-out 8.7s both,mock-live 1.8s ease-out 9.1s infinite}
+@keyframes mock-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes mock-type{from{opacity:1;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@keyframes mock-pop{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes mock-chip{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+@keyframes mock-bounce{50%{transform:translateY(5px)}}
+@keyframes mock-blink{50%{opacity:0}}
+@keyframes mock-live{from{box-shadow:0 0 0 0 rgba(19,128,68,.45)}to{box-shadow:0 0 0 9px rgba(19,128,68,0)}}
+@keyframes mock-shimmer{to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.mock-cursor i,.live,.mock-lines i{animation:none}}
+
+.mock-lines i{height:10px;border-radius:5px}
 .mock-lines i:last-child{width:60%}
 .mock-stack{display:flex;flex-wrap:wrap;gap:6px}
 .mock-stack span{padding:4px 10px;border-radius:6px;background:var(--pale);color:var(--navy);font-size:13px;font-weight:600}
@@ -70,7 +135,7 @@
 @media(max-width:900px){.split{grid-template-columns:1fr;gap:28px}}
 @media(max-width:650px){
     .visual{max-width:440px}
-    .hero-price{font-size:34px}
+    .hero-price{font-size:44px}
     .cards{grid-template-columns:1fr}
     .days{grid-template-rows:none;grid-auto-flow:row}
     .compare thead{display:none}
@@ -112,3 +177,21 @@
 .fx-flow span{background:linear-gradient(180deg,#fff,#eef3fb);border-color:#d7deea;box-shadow:0 3px 0 #d0d8e6,0 10px 18px -10px rgba(44,53,86,.35)}
 .fx-flow li:last-child span{border-color:#e07d10;background:linear-gradient(180deg,#ffb15c,var(--orange));box-shadow:0 3px 0 #c76a08,0 10px 22px -8px rgba(246,145,37,.7)}
 @media(prefers-reduced-motion:reduce){.fx .card,.fx .card svg{transition:none}.fx .card:hover,.fx .card:hover svg{transform:none}}
+
+/* 10 motto: the paragraph reads as a quote, with the speaker credited underneath */
+/* both blocks are sized to fit within the height of the photo beside them */
+#trainers h2{font-size:26px;line-height:1.25}
+#trainers .lead{max-width:none;margin-top:8px;font-size:16px;line-height:1.55}
+#trainers .names{margin-top:12px;font-size:17px}
+#trainers .names li span{font-size:15px}
+.why-title{margin-top:22px}
+#trainerIntro{font-style:italic;color:var(--navy)}
+#trainerIntro::before{content:"\201C"}
+#trainerIntro::after{content:"\201D"}
+#trainerNames li{padding-left:16px;border-left:4px solid var(--blue)}
+#trainerNames li span{color:var(--blue);font-weight:600}
+
+/* 01 hero buttons: two equal halves across the same width as the cards */
+.hero .actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.hero .actions .btn{width:100%;min-height:56px;text-align:center}
+@media(max-width:480px){.hero .actions{grid-template-columns:1fr}}

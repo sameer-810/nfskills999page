@@ -113,6 +113,17 @@ Every logo on the slider is stored locally in `public/assets/logos/<category>/` 
 | 64 | Generative AI | 2 | `public/assets/logos/ai/generative-ai.svg` | https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/sparkles.svg | Lucide (ISC); generic concept icon, not a brand logo |
 | 65 | Prompt Engineering | 2 | `public/assets/logos/ai/prompt-engineering.svg` | https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/terminal.svg | Lucide (ISC); generic concept icon, not a brand logo |
 
+## Technology strip under the hero (index.html, not in logos.json)
+
+| Name | Local asset path | Direct source URL | Licence |
+|------|------------------|-------------------|---------|
+| Nginx | `public/assets/logos/infrastructure/nginx.svg` | https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/nginx.svg | Simple Icons (CC0 1.0); recoloured to the brand colour #009639 |
+| CI/CD | `public/assets/logos/infrastructure/ci-cd.svg` | https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/infinity.svg | Lucide (ISC); generic concept icon, not a brand logo |
+| DNS | `public/assets/logos/infrastructure/dns.svg` | https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/globe.svg | Lucide (ISC); generic concept icon, not a brand logo |
+| SSL & HTTPS | `public/assets/logos/infrastructure/ssl-https.svg` | https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/lock.svg | Lucide (ISC); generic concept icon, not a brand logo |
+
+The other strip items reuse files listed above (AWS, Microsoft Azure, Linux, Ubuntu, GitHub, MongoDB, MySQL).
+
 ## Not sourced
 
 These were requested but not added, because no clean, current, transparent version of the correct brand mark could be verified from a licensable source:

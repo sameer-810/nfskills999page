@@ -33,11 +33,11 @@
         if (cfg.studentCount) {
             row.appendChild(el('p', { 'class': 'trust-count' }, [document.createTextNode('Trusted by '), el('b', { text: cfg.studentCount }), document.createTextNode(' Students')]));
         }
-        // The rating shows only when switched on AND backed by a real review count.
-        if (r.show && typeof r.value === 'number' && r.value > 0 && r.value <= 5 && r.reviewCount > 0) {
-            var url = safeUrl(r.sourceUrl), parts = [stars(r.value), el('span', { text: 'Rated ' + r.value + '/5 Stars' })];
+        // The rating shows when switched on; the review count is optional and only used in the screen-reader label.
+        if (r.show && typeof r.value === 'number' && r.value > 0 && r.value <= 5) {
+            var url = safeUrl(r.sourceUrl), parts = [el('span', { text: 'Rated ' + r.value + '/5' }), stars(r.value)];
             var inner = url ? el('a', { href: url, target: '_blank', rel: 'noopener noreferrer' }, parts) : el('span', { 'class': 'row' }, parts);
-            row.appendChild(el('p', { 'class': 'trust-rating', 'aria-label': 'Rated ' + r.value + ' out of 5 stars from ' + r.reviewCount + ' ' + (r.source || 'reviews') }, [inner]));
+            row.appendChild(el('p', { 'class': 'trust-rating', 'aria-label': 'Rated ' + r.value + ' out of 5 stars' + (r.reviewCount > 0 ? ' from ' + r.reviewCount + ' ' + (r.source || 'reviews') : '') }, [inner]));
         }
         if (row.children.length) box.hidden = false;
     }
@@ -109,6 +109,27 @@
         track.setAttribute('tabindex', '0');
         track.parentNode.appendChild(el('div', { 'class': 't-controls' }, [prev, status, next]));
         update();
+
+        // Auto-advance every 3 seconds, looping back to the first. It waits while the visitor is hovering,
+        // touching or focused on the strip, while it is off screen, and is off for reduced-motion visitors.
+        var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduce) return;
+        status.setAttribute('aria-live', 'off'); // do not announce every automatic slide
+        var wrap = track.parentNode, held = false, visible = !('IntersectionObserver' in window), timer;
+        function tick() {
+            if (held || !visible || document.hidden) return;
+            if (current() >= count) track.scrollTo({ left: 0, behavior: 'smooth' }); else step(1);
+        }
+        function restart() { clearInterval(timer); timer = setInterval(tick, 3000); }
+        function hold(on) { return function () { held = on; if (!on) restart(); }; }
+        wrap.addEventListener('mouseenter', hold(true));
+        wrap.addEventListener('mouseleave', hold(false));
+        wrap.addEventListener('focusin', hold(true));
+        wrap.addEventListener('focusout', hold(false));
+        wrap.addEventListener('touchstart', hold(true), { passive: true });
+        ['touchend', 'touchcancel'].forEach(function (e) { wrap.addEventListener(e, hold(false), { passive: true }); });
+        if (!visible) new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; if (visible) restart(); }, { threshold: 0.4 }).observe(track);
+        restart();
     }
 
     // Trainer section: data/trainer.json, photo in assets/trainer/. Empty role/bio fields are simply not shown.
