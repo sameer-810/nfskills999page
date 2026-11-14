@@ -8,11 +8,11 @@
     "sourceUrl": ""
   },
   "countdown": {
-    "deadline": "2026-11-16T12:00:00+05:30",
-    "dateLabel": "16 November 2026 · 12:00 PM IST",
+    "deadline": "2026-11-18T12:00:00+05:30",
+    "dateLabel": "18 November 2026 · 12:00 PM IST",
     "heading": "Registration Closing Soon",
     "closedHeading": "Registration closed",
-    "closedText": "Registration for the 16 November 2026 batch has closed. Message us on WhatsApp to hear about the next batch."
+    "closedText": "Registration for the 18 November 2026 batch has closed. Message us on WhatsApp to hear about the next batch."
   },
   "admission": {
     "startDate": null,

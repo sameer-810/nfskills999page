@@ -76,7 +76,7 @@ The group invitation is kept in WHATSAPP_GROUP_URL (.env and your host), never i
 
 CONFIRMED COURSE DETAILS:
 Production Deployment Accelerated Training Program (students deploy their own existing project)
-Starts: 16 November 2026
+Starts: 18 November 2026
 Timing: 8 PM–10 PM IST
 Duration: 10 days, 20 hours
 Mode: Live online
@@ -153,12 +153,12 @@ slide, with arrow buttons, swipe and keyboard scrolling. One object per student:
 
 REGISTRATION COUNTDOWN (public/countdown.js, public/countdown.css)
 Every element with data-countdown counts to "countdown.deadline" in site-config.json (one place):
-  "countdown": { "deadline": "2026-11-16T12:00:00+05:30", "dateLabel": "16 November 2026 · 12:00 PM IST",
+  "countdown": { "deadline": "2026-11-18T12:00:00+05:30", "dateLabel": "18 November 2026 · 12:00 PM IST",
                  "heading": "Registration Closing Soon", "closedHeading": "Registration closed",
                  "closedText": "..." }
 It recalculates from the clock every second, stops at 00, then shows the closed text, hides the admission
 panel and makes every Pay button show the closed message instead of the form.
-Server side: set REGISTRATION_CLOSES_AT to the same time (e.g. 2026-11-16T12:00:00+05:30) in .env and in the
+Server side: set REGISTRATION_CLOSES_AT to the same time (e.g. 2026-11-18T12:00:00+05:30) in .env and in the
 Netlify/Vercel environment variables; after it, /api/pay refuses new orders (410). Unset = always open.
 For a new batch, change both values.
 
@@ -260,4 +260,4 @@ date of issue, and the certificate downloads as an A4 landscape PDF named NFskil
   (blank background), netlify/functions/admin-login.mjs and api/admin-login.mjs (routes).
 - Design: integrations/certificate-design.html. Render #blank at 1600x1131 for lib/certificate-template.mjs and
   #watermark for public/assets/certificates/ (the website sample, covered in a small "NFskills" watermark).
-  The batch line "Batch starting 16 November 2026" is part of the design; re-render it for a new batch.
+  The batch line "Batch starting 18 November 2026" is part of the design; re-render it for a new batch.

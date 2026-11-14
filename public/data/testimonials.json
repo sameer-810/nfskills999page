@@ -9,12 +9,12 @@
     "course": "Production Deployment Accelerated Training Program",
     "video": "",
     "active": true,
-    "order": 1,
+    "order": 6,
     "sample": true
   },
   {
-    "id": "faizal",
-    "name": "Faizal Khan",
+    "id": "Abdul Malik",
+    "name": "Abul Malik",
     "designation": "MERN Stack Developer",
     "photo": "student-faizal.webp",
     "review": "Setting up Nginx, the process manager and the SSL certificate step by step finally made deployment click for me. Fixing the errors on my own project, live with the trainer, was the most useful part.",
@@ -55,7 +55,7 @@
     "id": "ajay",
     "name": "Ajay Kalastri",
     "designation": "Frontend Developer",
-    "photo": "",
+    "photo": "kaif.png",
     "review": "I only knew how to run npm start. Now I can build my React app for production, serve it with Nginx and point my own domain at it. The step-by-step sessions made it simple to follow.",
     "rating": null,
     "course": "Production Deployment Accelerated Training Program",
@@ -67,14 +67,14 @@
   {
     "id": "arvind",
     "name": "Arvind Kumar",
-    "designation": "Backend Developer",
+    "designation": "Azure Administrator",
     "photo": "student-arvind.webp",
     "review": "My Node.js API kept stopping whenever I closed the terminal. Learning to run it with a process manager behind a reverse proxy fixed that, and now I understand what is happening on the server.",
     "rating": null,
     "course": "Production Deployment Accelerated Training Program",
     "video": "",
     "active": true,
-    "order": 6,
+    "order": 1,
     "sample": true
   },
   {
