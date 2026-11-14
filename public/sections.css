@@ -89,3 +89,26 @@
         @keyframes rise{from{opacity:0;transform:translateY(16px)}}
     }
 }
+
+/* premium 3D treatment: why join, what you deploy, who should join */
+#why,#deploy,#audience{position:relative;overflow:hidden}
+#why:before,#deploy:before,#audience:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(520px 320px at 8% 12%,rgba(0,70,96,.08),transparent 70%),radial-gradient(460px 300px at 94% 88%,rgba(246,145,37,.10),transparent 70%)}
+#why>.container,#deploy>.container,#audience>.container{position:relative}
+.fx .card{position:relative;overflow:hidden;border:1px solid rgba(44,53,86,.09);border-radius:18px;background:linear-gradient(180deg,#fff 0%,#fbfcff 100%);box-shadow:0 1px 2px rgba(44,53,86,.06),0 18px 34px -20px rgba(44,53,86,.35);transition:transform .25s ease,box-shadow .25s ease}
+.fx .card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--blue) 55%,var(--orange));opacity:.85}
+.fx .card:after{content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(246,145,37,.14),transparent 70%);pointer-events:none}
+.fx .card:hover{transform:translateY(-5px);box-shadow:0 2px 4px rgba(44,53,86,.08),0 26px 44px -20px rgba(44,53,86,.45)}
+/* glossy 3D icon tiles: top highlight, bottom shade, coloured drop shadow; three tones in rotation */
+.fx .card svg{width:56px;height:56px;padding:14px;border-radius:16px;color:#fff;stroke-width:1.9;
+    background:radial-gradient(circle at 30% 18%,rgba(255,255,255,.5),rgba(255,255,255,0) 46%),linear-gradient(150deg,#46548a 0%,var(--navy) 55%,#1c2340 100%);
+    box-shadow:inset 0 1.5px 0 rgba(255,255,255,.35),inset 0 -5px 10px rgba(0,0,0,.28),0 12px 20px -8px rgba(44,53,86,.6),0 3px 0 #1a2038;transition:transform .25s ease}
+.fx .card:nth-child(3n+2) svg{background:radial-gradient(circle at 30% 18%,rgba(255,255,255,.55),rgba(255,255,255,0) 46%),linear-gradient(150deg,#ffb763 0%,var(--orange) 52%,#cf6c08 100%);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.45),inset 0 -5px 10px rgba(120,55,0,.3),0 12px 20px -8px rgba(207,108,8,.6),0 3px 0 #b55e06}
+.fx .card:nth-child(3n) svg{background:radial-gradient(circle at 30% 18%,rgba(255,255,255,.5),rgba(255,255,255,0) 46%),linear-gradient(150deg,#1a7a9c 0%,var(--blue) 55%,#002c3d 100%);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.35),inset 0 -5px 10px rgba(0,0,0,.3),0 12px 20px -8px rgba(0,70,96,.6),0 3px 0 #00293a}
+.fx .card:hover svg{transform:perspective(300px) rotateX(10deg) rotateY(-12deg) translateY(-2px)}
+.fx-row .card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:start}
+.fx-row .card svg{margin:0}
+.fx-row .card p{margin-top:6px}
+/* the deployment flow as raised 3D keys */
+.fx-flow span{background:linear-gradient(180deg,#fff,#eef3fb);border-color:#d7deea;box-shadow:0 3px 0 #d0d8e6,0 10px 18px -10px rgba(44,53,86,.35)}
+.fx-flow li:last-child span{border-color:#e07d10;background:linear-gradient(180deg,#ffb15c,var(--orange));box-shadow:0 3px 0 #c76a08,0 10px 22px -8px rgba(246,145,37,.7)}
+@media(prefers-reduced-motion:reduce){.fx .card,.fx .card svg{transition:none}.fx .card:hover,.fx .card:hover svg{transform:none}}
