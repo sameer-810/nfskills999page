@@ -68,7 +68,7 @@
     "id": "arvind",
     "name": "Arvind Kumar",
     "designation": "Backend Developer",
-    "photo": "",
+    "photo": "student-arvind.webp",
     "review": "My Node.js API kept stopping whenever I closed the terminal. Learning to run it with a process manager behind a reverse proxy fixed that, and now I understand what is happening on the server.",
     "rating": null,
     "course": "Production Deployment Accelerated Training Program",
