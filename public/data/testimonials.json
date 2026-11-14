@@ -42,7 +42,7 @@
     "id": "shayan",
     "name": "Shayan",
     "designation": "Computer Science Student",
-    "photo": "student-1.webp",
+    "photo": "student-shayan.webp",
     "review": "I had never worked on a Linux server before. Now my college project is live on its own domain, connected to a production database, and I know how to keep it running.",
     "rating": null,
     "course": "Production Deployment Accelerated Training Program",
