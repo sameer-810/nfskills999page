@@ -1,8 +1,9 @@
 (function () {
     'use strict';
     // Every [data-countdown] on the page counts to the one deadline in data/site-config.json.
-    var boxes = document.querySelectorAll('[data-countdown]');
-    if (!boxes.length) return;
+    // The sticky banner (#stickyReg) reads the same tick, so every countdown on the page always agrees.
+    var boxes = document.querySelectorAll('[data-countdown]'), bar = document.getElementById('stickyReg');
+    if (!boxes.length && !bar) return;
     var UNITS = [['Days', 864e5], ['Hours', 36e5], ['Minutes', 6e4], ['Seconds', 1e3]];
 
     function el(tag, cls, text) {
@@ -46,23 +47,33 @@
             note.setAttribute('role', 'status');
             v.box.appendChild(note);
         });
+        if (bar) { bar.classList.add('closed'); bar.querySelector('[data-cd-label]').textContent = cfg.closedHeading; }
+    }
+
+    function showBar() {
+        bar.hidden = false;
+        // Pad the page by the banner's real height, so it never covers the footer or the last button.
+        var pad = function () { document.documentElement.style.setProperty('--bar-h', bar.offsetHeight + 'px'); };
+        pad();
+        if (window.ResizeObserver) new ResizeObserver(pad).observe(bar); else window.addEventListener('resize', pad);
     }
 
     function start(cfg) {
         var deadline = Date.parse(cfg && cfg.deadline);
         if (isNaN(deadline)) return;
         var views = Array.prototype.map.call(boxes, function (b) { return build(b, cfg); }), timer;
+        var digits = bar ? bar.querySelectorAll('[data-cd]') : [];
+        if (bar) {
+            var ist = function (t) { return new Date(t).toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' }); };
+            if (ist(Date.now()) === ist(deadline)) bar.querySelector('[data-cd-label]').textContent = 'Batch starts today · registration closes in';
+            showBar();
+        }
         function tick() {
             // Recomputed from the clock each time, so a sleeping tab never drifts.
-            var left = Math.max(0, deadline - Date.now());
-            views.forEach(function (v) {
-                var rest = left;
-                UNITS.forEach(function (u, i) {
-                    var n = Math.floor(rest / u[1]);
-                    rest -= n * u[1];
-                    v.values[i].textContent = String(n).padStart(2, '0');
-                });
-            });
+            var left = Math.max(0, deadline - Date.now()), rest = left;
+            var parts = UNITS.map(function (u) { var n = Math.floor(rest / u[1]); rest -= n * u[1]; return String(n).padStart(2, '0'); });
+            views.forEach(function (v) { parts.forEach(function (p, i) { v.values[i].textContent = p; }); });
+            parts.forEach(function (p, i) { if (digits[i]) digits[i].textContent = p; });
             if (!left) { clearInterval(timer); close(views, cfg); }
         }
         tick();

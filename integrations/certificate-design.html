@@ -59,6 +59,8 @@ svg{display:block}
     <div><div style="font:800 30px/34px M,sans-serif">NF<span style="color:#fff">skills</span></div><div style="font:800 17px/22px M,sans-serif;letter-spacing:.1em">CERTIFIED</div><div style="font:700 15px/20px M,sans-serif;letter-spacing:.06em">COMPLETION</div></div>
   </div>
 </div>
+<!-- signature: also stamped onto lib/certificate-template.mjs; hidden in #watermark so the public sample never carries it -->
+<img class="a sig" src="assets/signature.png" alt="" style="left:1184px;top:808px;width:123px;height:118px;z-index:2">
 <div class="a" style="left:1080px;top:870px;width:330px;text-align:center">
   <div style="height:32px"></div>
   <div style="height:2px;background:var(--navy);margin:10px 0 8px"></div>
@@ -69,6 +71,7 @@ svg{display:block}
 <script>
 if (location.hash.includes('blank')) document.querySelectorAll('.fill').forEach(function (e) { e.style.visibility = 'hidden'; });
 if (location.hash.includes('watermark')) {
+  document.querySelector('.sig').remove();
   // small repeated "NFskills" text over the whole certificate, so the website copy cannot be passed off as real
   var w = document.createElement('div');
   w.style.cssText = 'position:absolute;left:-600px;top:-700px;width:2800px;height:2600px;transform:rotate(-28deg);display:flex;flex-wrap:wrap;align-content:flex-start;gap:30px 46px;font:800 22px/1 M,sans-serif;color:rgba(44,53,86,.16);pointer-events:none;z-index:9';

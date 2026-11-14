@@ -1,7 +1,7 @@
 [
   {
     "id": "sachin",
-    "name": "Sachin",
+    "name": "Sachin Marwade",
     "designation": "Software Developer",
     "photo": "student-sachin.webp",
     "review": "My MERN project only ever ran on localhost. In this training I deployed it to a cloud server with my own domain and HTTPS, and now I can explain every step of the deployment in interviews.",
@@ -14,7 +14,7 @@
   },
   {
     "id": "faizal",
-    "name": "Faizal",
+    "name": "Faizal Khan",
     "designation": "MERN Stack Developer",
     "photo": "student-faizal.webp",
     "review": "Setting up Nginx, the process manager and the SSL certificate step by step finally made deployment click for me. Fixing the errors on my own project, live with the trainer, was the most useful part.",
@@ -49,6 +49,45 @@
     "video": "",
     "active": true,
     "order": 4,
+    "sample": true
+  },
+  {
+    "id": "ajay",
+    "name": "Ajay Kalastri",
+    "designation": "Frontend Developer",
+    "photo": "",
+    "review": "I only knew how to run npm start. Now I can build my React app for production, serve it with Nginx and point my own domain at it. The step-by-step sessions made it simple to follow.",
+    "rating": null,
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "",
+    "active": true,
+    "order": 5,
+    "sample": true
+  },
+  {
+    "id": "arvind",
+    "name": "Arvind Kumar",
+    "designation": "Backend Developer",
+    "photo": "",
+    "review": "My Node.js API kept stopping whenever I closed the terminal. Learning to run it with a process manager behind a reverse proxy fixed that, and now I understand what is happening on the server.",
+    "rating": null,
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "",
+    "active": true,
+    "order": 6,
+    "sample": true
+  },
+  {
+    "id": "sanjay",
+    "name": "Sanjay Kokde",
+    "designation": "Freelance Web Developer",
+    "photo": "",
+    "review": "I used to hand client projects over as zip files. After this training I deploy them on the client's own server with HTTPS, which makes my work look far more professional.",
+    "rating": null,
+    "course": "Production Deployment Accelerated Training Program",
+    "video": "",
+    "active": true,
+    "order": 7,
     "sample": true
   }
 ]
