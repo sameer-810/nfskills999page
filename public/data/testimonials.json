@@ -10,7 +10,7 @@
     "video": "",
     "active": true,
     "order": 6,
-    "sample": true
+    "sample": false
   },
   {
     "id": "Abdul Malik",
@@ -23,7 +23,7 @@
     "video": "",
     "active": true,
     "order": 2,
-    "sample": true
+    "sample": false
   },
   {
     "id": "inder",
@@ -36,7 +36,7 @@
     "video": "",
     "active": true,
     "order": 3,
-    "sample": true
+    "sample": false
   },
   {
     "id": "shayan",
@@ -49,7 +49,7 @@
     "video": "",
     "active": true,
     "order": 4,
-    "sample": true
+    "sample": false
   },
   {
     "id": "ajay",
@@ -62,7 +62,7 @@
     "video": "",
     "active": true,
     "order": 5,
-    "sample": true
+    "sample": false
   },
   {
     "id": "arvind",
@@ -75,7 +75,7 @@
     "video": "",
     "active": true,
     "order": 1,
-    "sample": true
+    "sample": false
   },
   {
     "id": "sanjay",
@@ -88,6 +88,6 @@
     "video": "",
     "active": true,
     "order": 7,
-    "sample": true
+    "sample": false
   }
 ]
